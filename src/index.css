@@ -1,2 +1,10 @@
 @import "tailwindcss";
 
+/* ---Color Theme--- */
+@theme {
+  --color-bgColor: #0A1128;
+  --color-textColor: #FFFBE8;
+  --color-secTextColor: #E2E8F0;
+  --color-accent: #3180db;
+  --font-poppins: "Poppins", sans-serif;
+}
