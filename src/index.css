@@ -5,6 +5,35 @@
   --color-bgColor: #0A1128;
   --color-textColor: #FFFBE8;
   --color-secTextColor: #E2E8F0;
-  --color-accent: #3180db;
+  --color-mutedText: #8892B0;
+  --color-accent: #64FFDA;
   --font-poppins: "Poppins", sans-serif;
+}
+
+/* ---Animation--- */
+@keyframes heartbeatShadow{
+  0% {
+    box-shadow: 0 0 0px rgba(100, 255, 218, 0.20);
+  }
+  50% {
+    box-shadow: 0  0 20px rgba(100, 255, 218, 0.50);
+  }
+  100%{
+    box-shadow: 0 0 0px rgba(100, 255, 218, 0.20);
+  }
+}
+.shadowGlow{
+  animation: heartbeatShadow 3s ease-in-out infinite;
+}
+.shadowAccent{
+  box-shadow: 0  0 20px rgba(100, 255, 218, 0.50);;
+}
+
+.buttonHover:hover {
+  color: #64FFDA;
+  box-shadow: 0 0 10px 4px rgba(100, 255, 218, 0.20);
+  border-color: #64FFDA;
+}
+.buttonHover{
+  transition: all 0.3s ease;
 }
