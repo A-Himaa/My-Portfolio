@@ -3,7 +3,7 @@ import logo1 from "../assets/logo1.png";
 export default function Navbar() {
 
   return (
-    <nav className="w-full top-0 fixed bg-bgColor backdrop-blur-md z-50 shadowGlow shadowAccent py-2">
+    <nav className="w-full bg-bgColor backdrop-blur-md z-50 shadowGlow shadowAccent py-2">
       <div className="flex items-center justify-between max-w-6xl mx-auto px-6 py-4 ">
 
         {/* Logo */}
