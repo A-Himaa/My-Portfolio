@@ -3,14 +3,15 @@ import logo1 from "../assets/logo1.png";
 export default function Navbar() {
 
   return (
-    <nav className="w-full bg-bgColor backdrop-blur-md z-50 shadowGlow shadowAccent py-2">
+    <nav className="w-full bg-bgColor backdrop-blur-md z-50  py-2 "> 
+    {/* shadowGlow shadowAccent */}
       <div className="flex items-center justify-between max-w-6xl mx-auto px-6 py-4 ">
 
         {/* Logo */}
         <div className="flex items-center gap-2">
           <a href="#"><img
             src={logo1}
-            className="h-12 w-auto"
+            className="h-14 w-auto"
             alt="logo" />
           </a>
           <span className="text-base font-semibold font-poppins text-secTextColor pt-1">Akila Himaja</span>
