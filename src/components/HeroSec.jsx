@@ -46,6 +46,8 @@ export default function Herosec() {
 
     return(
         <section className="max-w-6xl mx-auto px-6 pt-20 grid grid-cols-1 md:grid-cols-[3fr_2fr]">
+
+            {/*-----------Hero - Left-----------------------*/}
             <div className="space-y-5">
 
                 <p className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-1 w-1/2 md:w-1/4 tracking-wider rounded-sm">
@@ -95,6 +97,8 @@ export default function Herosec() {
 
 
             </div>
+
+            {/*-----------Hero - Right----------------------*/}
             <div>
                 {/* <h1 className="text-textColor text-5xl font-bold">Building Smart, Efficient & Human-Centered Web Solutions</h1> */}
 
