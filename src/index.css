@@ -2,12 +2,21 @@
 
 /* ---Color Theme--- */
 @theme {
+
+  /* Background */
   --color-bgColor: #0A1128;
+  --color-accent: #00F0FF;
+
+  /* Text */
   --color-textColor: #FFFBE8;
+  --color-textAccent: #02B4D4;
+  --color-buttonHover: #0083BF;
+  --font-poppins: "Poppins", sans-serif;
+
   --color-secTextColor: #E2E8F0;
   --color-mutedText: #8892B0;
-  --color-accent: #64FFDA;
-  --font-poppins: "Poppins", sans-serif;
+  
+  
 }
 
 /* ---Animation--- */
@@ -37,7 +46,6 @@
 .buttonHover{
   transition: all 0.3s ease;
 }
-
 
 
 

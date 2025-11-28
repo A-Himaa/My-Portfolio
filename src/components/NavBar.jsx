@@ -8,10 +8,10 @@ export default function Navbar() {
       <div className="flex items-center justify-between max-w-6xl mx-auto px-6 py-4 ">
 
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <a href="#"><img
             src={logo1}
-            className="h-14 w-auto"
+            className="h-10 w-auto opacity-80"
             alt="logo" />
           </a>
           <span className="text-base font-semibold font-poppins text-secTextColor pt-1">Akila Himaja</span>
