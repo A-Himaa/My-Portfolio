@@ -49,3 +49,29 @@
 
 
 
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 3.5s infinite;
+  }
+
+  .animate-bounce-slower {
+    animation: bounce 5s infinite;
+  }
+}

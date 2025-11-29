@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import refImage from "../assets/refImg.jpg";
+import refImage from "../assets/refImg.png";
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
@@ -51,7 +51,7 @@ export default function Herosec() {
             <div className="space-y-5">
 
                 <p className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-1 w-1/2 md:w-1/4 tracking-wider rounded-sm">
-                    HIMAJA TISSERA
+                    WEB DEVELOPER
                 </p>
 
                 <h1 className="font-bold text-3xl md:text-5xl text-textColor tracking-wider pb-2">
@@ -80,13 +80,13 @@ export default function Herosec() {
                     {/* Social Icons */}
                     <div className="flex items-center gap-4 mt-2">
 
-                        <a href="#" className="text-textColor hover:text-textAccent transition-transform duration-300 hover:scale-[1.1] opacity-80">
+                        <a href="#" className="text-textColor hover:text-buttonHover transition-transform duration-300 hover:scale-[1.1] opacity-80">
                             <FaGithub size={40} strokeWidth={1.7} />
                         </a>
 
                         <a
                         href="#"
-                        className="text-textColor hover:text-textAccent transition-transform duration-300 hover:scale-[1.1] opacity-80"
+                        className="text-textColor hover:text-buttonHover transition-transform duration-300 hover:scale-[1.1] opacity-80"
                         >
                         <FaLinkedin size={40} strokeWidth={1.7} />
                         </a>
@@ -99,17 +99,19 @@ export default function Herosec() {
             </div>
 
             {/*-----------Hero - Right----------------------*/}
-            <div>
-                {/* <h1 className="text-textColor text-5xl font-bold">Building Smart, Efficient & Human-Centered Web Solutions</h1> */}
+            <div className="relative w-full flex justify-center items-center">
 
+                <div className="absolute w-[420px] h-[420px] top-2 rounded-full bg-gray-500 z-30"></div>
+                <div className="absolute w-[180px] h-[180px] rounded-full bg-gray-500/50 -top-10 -right-5"></div>
+                <img 
+                   src={refImage}
+                   alt="Profile Image"
+                   className="w-[320px] md:w-[350px] ml-15 z-50"/>
             </div>
+             
         </section>
     )
 }
-
-
-
-
 
 
 
