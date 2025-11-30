@@ -8,7 +8,7 @@ export default function About() {
                 </div>
 
                 {/*-----------Right Section------------*/}
-                <div className="space-y-2">
+                <div className="">
                     <p>About Me</p>
                     <p>Curious Developer, Tech Explorer, Problem Solver</p>
                     <p> I'm a passionate and detail-oriented software engineer with a strong interest 
