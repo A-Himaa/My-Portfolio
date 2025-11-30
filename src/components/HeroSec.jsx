@@ -6,6 +6,7 @@ import { FaLinkedin } from "react-icons/fa6";
 
 export default function Herosec() {
 
+    // Typewriter Text
     const Typewriter = ({textArray, speed = 120, pause = 1000}) => {
         const [index, setIndex] = useState(0);
         const [displaying, setDisplaying] = useState("");
@@ -44,36 +45,80 @@ export default function Herosec() {
         );
     }
 
+    // Animation
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.25, 
+        }
+        }
+    };
+
+    const item = {
+        hidden: { 
+            opacity: 0, 
+            y: 20 
+        },
+        show: { 
+            opacity: 1, 
+            y: 0, 
+            transition: { 
+                duration: 0.6, 
+                ease: "easeOut" 
+            }
+         }
+    };
+
     return(
-        <section className="max-w-6xl mx-auto px-6 pt-20 grid grid-cols-1 md:grid-cols-[3fr_2fr]">
+        <section className="max-w-6xl mx-auto px-6 pt-20 grid grid-cols-1 md:grid-cols-[3fr_2fr] mb-15">
 
             {/*-----------Hero - Left-----------------------*/}
-            <div className="space-y-5">
+            <motion.div 
+                className="space-y-5"
+                variants={container}
+                initial="hidden"
+                animate="show"
+            >
 
-                <p className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-1 w-1/2 md:w-1/4 tracking-wider rounded-sm">
+                <motion.p
+                    variants={item}
+                    className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-1 w-1/2 md:w-1/4 tracking-wider rounded-sm">
                     WEB DEVELOPER
-                </p>
+                </motion.p>
 
-                <h1 className="font-bold text-3xl md:text-5xl text-textColor tracking-wider pb-2">
+                <motion.h1
+                    variants={item}
+                    className="font-bold text-3xl md:text-5xl text-textColor tracking-wider pb-2">
                     HEY! I'M <span className="text-textAccent drop-shadow-[0_0_2px_#64FFDA66] font-serif italic">HIMAJA</span> 
-                </h1>
+                </motion.h1>
 
-                <h2 className="font-bold text-3xl md:text-5xl text-textColor pb-2 leading-tight">
+                <motion.h2
+                    variants={item}
+                    className="font-bold text-3xl md:text-5xl text-textColor pb-2 leading-tight">
                     I bring ideas to life through code & design.
-                </h2>
+                </motion.h2>
+                <motion.div variants={item}>
+                                        <Typewriter textArray={["Aspiring Full-Stack Developer", "Efficient Problem Solver", "Tech Explorer & Fast Learner", "Goal-Driven & Self-Motivated"]}/>
 
-                <Typewriter textArray={["Aspiring Full-Stack Developer", "Efficient Problem Solver", "Tech Explorer & Fast Learner", "Goal-Driven & Self-Motivated"]}/>
+                </motion.div>
 
-                <p className="text-base text-textColor tracking-wide">
+
+                <motion.p 
+                    variants={item}
+                    className="text-base text-textColor tracking-wide">
                     I build scalable and efficient web applications with a focus on user-centric solutions. 
                     Passionate about tackling complex challenges and delivering innovative digital experiences 
                     that combine performance, usability, and creativity.
-                </p>
+                </motion.p>
 
-                <div className="flex items-center gap-6">
+                <motion.div 
+                    variants={item}
+                    className="flex items-center gap-6">
                     <a href="#">
                         <button className="bg-textAccent text-base md:text-lg font-bold text-bgColor tracking-wide px-5 py-4 rounded-sm mt-2 transition-transform duration-300 hover:scale-[1.1] hover:bg-buttonHover">
-                        View My Work
+                        Explore My Work
                         </button>
                     </a>
 
@@ -92,21 +137,23 @@ export default function Herosec() {
                         </a>
 
                     </div>
+                </motion.div>
 
-                    </div>
 
-
-            </div>
+            </motion.div>
 
             {/*-----------Hero - Right----------------------*/}
             <div className="relative w-full flex justify-center items-center">
 
                 <div className="absolute w-[420px] h-[420px] top-2 rounded-full bg-gray-500 z-30"></div>
+                <div className="absolute w-[450px] h-[450px] -top-4 border-2 border-white/10 rounded-full z-30"></div>
                 <div className="absolute w-[180px] h-[180px] rounded-full bg-gray-500/50 -top-10 -right-5"></div>
+                <div className="absolute w-[180px] h-[180px] rounded-full bg-gray-500/50 bottom-5 -left-5"></div>
+
                 <img 
                    src={refImage}
                    alt="Profile Image"
-                   className="w-[320px] md:w-[350px] ml-15 z-50"/>
+                   className="w-[320px] md:w-[340px] ml-15 z-50"/>
             </div>
              
         </section>
