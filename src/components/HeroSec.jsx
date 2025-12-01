@@ -100,7 +100,7 @@ export default function Herosec() {
                     I bring ideas to life through code & design.
                 </motion.h2>
                 <motion.div variants={item}>
-                                        <Typewriter textArray={["Aspiring Full-Stack Developer", "Efficient Problem Solver", "Tech Explorer & Fast Learner", "Goal-Driven & Self-Motivated"]}/>
+                   <Typewriter textArray={["Aspiring Full-Stack Developer", "Software Engineering Enthusiast", "Efficient Problem Solver", "Tech Explorer & Fast Learner", "Goal-Driven & Self-Motivated"]}/>
 
                 </motion.div>
 
