@@ -106,14 +106,31 @@ export default function About() {
                               <p className="text-textColor font-medium">Intern SE at Rangiri Holdings</p>
                             </div>
                         </div>
-                        
-
-
-
-                          </div>
+                      </div>
                     </div>
                   )}
+
+                  {/* Aspiration */}
+                  {activeTab === "Aspiration" && (
+                    <div className="space-y-6">
+                      <p className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-1 w-1/2 md:w-1/4 tracking-wider rounded-sm">
+                          ASPIRATION
+                      </p>
+                      <p className="text-base text-textColor tracking-wide">
+                        I aspire to grow into a highly skilled full-stack developer focused on building 
+                        scalable, user-centric digital solutions. My goal is to deepen my expertise in 
+                        modern web technologies, system architecture, and cloud-based development while 
+                        contributing to impactful real-world projects. 
+                      </p>
+                      <p className="text-base text-textColor tracking-wide">
+                        I aim to work in a dynamic engineering environment where I can solve meaningful 
+                        problems, collaborate with talented teams, and continuously refine my craft. In 
+                        the long run, I hope to lead innovative projects that blend creativity, technology, 
+                        and thoughtful design to create experiences that truly make a difference.
+                      </p>
                     </div>
+                  )}
+                </div>
 
                   <a href="#">
                     <button className="bg-textAccent text-base md:text-lg font-bold text-bgColor tracking-wide px-5 py-4 rounded-sm mt-5 transition-transform duration-300 hover:scale-[1.1] hover:bg-buttonHover">
