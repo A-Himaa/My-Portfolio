@@ -132,15 +132,13 @@ export default function About() {
                   )}
                 </div>
 
-                  <a href="#">
-                    <button className="bg-textAccent text-base md:text-lg font-bold text-bgColor tracking-wide px-5 py-4 rounded-sm mt-5 transition-transform duration-300 hover:scale-[1.1] hover:bg-buttonHover">
-                      Download Resume
-                    </button>
-                  </a>
-
+                <a href="#">
+                  <button className="border-2 border-accent/80 text-base font-semibold text-textColor tracking-wide px-3 py-3 rounded-md mt-5 hover:bg-accent/50">
+                    Download Resume
+                  </button>
+                </a>
                 </div>
-            </div>
-            
+            </div>  
         </section>
     )
 }
