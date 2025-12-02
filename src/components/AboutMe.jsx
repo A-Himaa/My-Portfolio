@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FaLaptopCode, FaPalette, FaServer, FaCogs, FaClipboardCheck } from 'react-icons/fa';
+import { FaDiamond } from "react-icons/fa6";
+import { DiamondIcon } from "lucide-react";
+import { MdDesignServices } from "react-icons/md";
+import { LuLayoutDashboard } from "react-icons/lu";
 
 export default function About() {
     const [activeTab, setActiveTab] = useState("About Me");
@@ -26,8 +31,8 @@ const item = {
 
 
     return(
-        <section className="w-full bg-bgColor py-20 min-h-screen">
-            <div className="max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-2 mx-auto px-6">
+        <section className="w-full bg-bgColor py-20">
+            <div className="max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-2 mx-auto px-6 mb-30">
                 <div className="relative ">
 
                 </div>
@@ -204,7 +209,7 @@ const item = {
                         the long run, I hope to lead innovative projects that blend creativity, technology, 
                         and thoughtful design to create experiences that truly make a difference.
                       </motion.p>
-                      
+
                     </motion.div>
                   )}
                 </div>
@@ -216,6 +221,61 @@ const item = {
                 </a>
                 </div>
             </div>  
+
+
+            {/*-----------Services Section------------*/}
+            <motion.div 
+              className="space-y-5 px-6"
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.25 }}
+            >
+
+            <motion.h3 
+              className="font-mono text-base text-textAccent text-center mb-0"
+              variants={item} 
+            >
+              SERVICES
+            </motion.h3>
+            
+              <h2 className="font-bold text-3xl md:text-5xl text-textColor pb-2 leading-tight text-center">Services I Offer</h2>
+              <p className="text-base text-textColor tracking-wide text-center mx-auto max-w-3xl">
+                I provide end-to-end digital solutions, including responsive web development, intuitive UI/UX design, 
+                scalable backend systems, and full-stack applications that deliver high-quality, user-focused experiences.
+              </p>
+
+              <div className="py-2">
+                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-5 px-6">
+
+                  {/* Service 1 */}
+                  <div className="bg-bgColor border border-accent/40 p-6 text-center">
+                    <MdDesignServices className="text-4xl text-accent/50 mb-4 mx-auto" />
+                    <h3 className="font-semibold text-xl text-textColor mt-5">UI/UX Design</h3>
+                  </div>
+
+                  {/* Service 2 */}
+                  <div className="bg-bgColor border border-accent/40 p-6 text-center ">
+                    <FaLaptopCode className="text-4xl text-accent/50 mb-4 mx-auto" />
+                    <h3 className="font-semibold text-xl text-textColor mt-5">Web Development</h3>
+                  </div>
+
+                  {/* Service 3 */}
+                  <div className="bg-bgColor border border-accent/40 p-6 text-center ">
+                    <FaServer className="text-4xl text-accent/50 mb-4 mx-auto" />
+                    <h3 className="font-semibold text-xl text-textColor mt-5">Backend Development</h3>
+                  </div>
+
+                  {/* Service 4 */}
+                  <div className="bg-bgColor border border-accent/40 p-6 text-center ">
+                    <FaClipboardCheck className="text-4xl text-accent/50 mb-4 mx-auto" />
+                    <h3 className="font-semibold text-xl text-textColor mt-5">QA/ Testing</h3>
+                  </div>
+
+                </div>
+              </div>
+
+            </motion.div>
         </section>
     )
 }
