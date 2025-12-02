@@ -238,15 +238,23 @@ const item = {
             >
               SERVICES
             </motion.h3>
-            
-              <h2 className="font-bold text-3xl md:text-5xl text-textColor pb-2 leading-tight text-center">Services I Offer</h2>
-              <p className="text-base text-textColor tracking-wide text-center mx-auto max-w-3xl">
+
+            <motion.h2 
+              className="font-bold text-3xl md:text-5xl text-textColor pb-2 leading-tight text-center"
+              variants={item}
+            >
+              Services I Offer
+            </motion.h2>
+
+            <motion.p 
+              className="text-base text-textColor tracking-wide text-center mx-auto max-w-3xl"
+              variants={item}>
                 I provide end-to-end digital solutions, including responsive web development, intuitive UI/UX design, 
                 scalable backend systems, and full-stack applications that deliver high-quality, user-focused experiences.
-              </p>
+            </motion.p>
 
-              <div className="py-2">
-                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-5 px-6">
+            <div className="py-2">
+                <motion.div variants={item} className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-5 px-6">
 
                   {/* Service 1 */}
                   <div className="bg-bgColor border border-accent/40 p-6 text-center">
@@ -272,10 +280,10 @@ const item = {
                     <h3 className="font-semibold text-xl text-textColor mt-5">QA/ Testing</h3>
                   </div>
 
-                </div>
-              </div>
+                </motion.div>
+            </div>
 
-            </motion.div>
+        </motion.div>
         </section>
     )
 }
