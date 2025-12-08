@@ -20,8 +20,8 @@ export default function Navbar() {
         {/* Navigation Links */}
         <ul className="hidden md:flex items-center text-textColor gap-12">
           <li className="hover:text-accent transition duration-300"><a href="#">About</a></li>
-          <li className="hover:text-accent transition duration-300"><a href="#">Projects</a></li>
           <li className="hover:text-accent transition duration-300"><a href="#">Skills</a></li>
+          <li className="hover:text-accent transition duration-300"><a href="#">Projects</a></li>
           <li className="hover:text-accent transition duration-300"><a href="#">Contact</a></li>
           <li>
             <a 

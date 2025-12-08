@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Navbar from './components/NavBar';
 import HeroSec from './components/HeroSec';
 import About from './components/AboutMe';
+import Skills from './components/Skills';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <HeroSec />
       <About />
+      <Skills />
 
     </div>
 
