@@ -9,8 +9,8 @@ import { LuLayoutDashboard } from "react-icons/lu";
 export default function About() {
     const [activeTab, setActiveTab] = useState("About Me");
 
-    // Animation
-    const container = {
+// Animation
+const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
