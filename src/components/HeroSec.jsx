@@ -72,7 +72,7 @@ export default function Herosec() {
     };
 
     return(
-        <section className="max-w-6xl mx-auto px-6 pt-20 grid grid-cols-1 md:grid-cols-[3fr_2fr] mb-15">
+        <section className="max-w-6xl mx-auto px-6 pt-20 grid grid-cols-1 md:grid-cols-[3fr_2fr] mb-15 min-h-screen md:pt-40">
 
             {/*-----------Hero - Left-----------------------*/}
             <motion.div 
@@ -143,7 +143,7 @@ export default function Herosec() {
             </motion.div>
 
             {/*-----------Hero - Right----------------------*/}
-            <div className="relative w-full flex justify-center items-center">
+            {/* <div className="relative w-full flex justify-center items-center">
 
                 <div className="absolute w-[420px] h-[420px] top-2 rounded-full bg-gray-500 z-30"></div>
                 <div className="absolute w-[450px] h-[450px] -top-4 border-2 border-white/10 rounded-full z-30"></div>
@@ -154,7 +154,7 @@ export default function Herosec() {
                    src={refImage}
                    alt="Profile Image"
                    className="w-[320px] md:w-[340px] ml-15 z-50"/>
-            </div>
+            </div> */}
              
         </section>
     )

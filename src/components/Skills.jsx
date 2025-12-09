@@ -106,7 +106,7 @@ export default function Skills() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.05 }}
                             viewport={{ once: true }}
-                            className="mb-3"
+                            className="mb-4"
                         >
                         <div className="flex justify-between mb-1">
                             <span className="text-textColor font-medium">{skill.name}</span>
@@ -202,7 +202,7 @@ export default function Skills() {
             <h3 className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-2 tracking-wider rounded-sm">PROFESSIONAL SKILLS</h3>
 
             {/* Doughnut Charts */}
-            <div className="grid grid-cols-1 md:grid-cols-3 justify-center my-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 justify-center my-6">
                 {professionalSkills.map((skill, index) => (
                     <motion.div
                         key={index}
@@ -248,7 +248,7 @@ export default function Skills() {
             ))}
         </div>
         
-        <h3 className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-2 tracking-wider rounded-sm mt-8">TOOL KIT</h3>
+        <h3 className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-2 tracking-wider rounded-sm my-6 mt-10">TOOL KIT</h3>
         <div className="flex flex-wrap items-center justify-center gap-3 mt-7">
             {tools.map((tool, index) => (
             <div key={index} className="flex items-center">

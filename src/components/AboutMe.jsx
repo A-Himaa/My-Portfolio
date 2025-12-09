@@ -225,7 +225,7 @@ const item = {
 
             {/*-----------Services Section------------*/}
             <motion.div 
-              className="space-y-5 px-6"
+              className="space-y-5 px-6 mb-20"
               variants={container}
               initial="hidden"
               whileInView="show"
