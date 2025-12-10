@@ -21,9 +21,9 @@
 
 /* ---Animation--- */
 .buttonHover:hover {
-  color: #64FFDA;
+  color: #00F0FF;
   box-shadow: 0 0 10px 4px rgba(100, 255, 218, 0.20);
-  border-color: #64FFDA;
+  border-color: #00F0FF;
 }
 .buttonHover{
   transition: all 0.3s ease;

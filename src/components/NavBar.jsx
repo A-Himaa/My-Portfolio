@@ -19,20 +19,20 @@ export default function Navbar() {
         </div>
 
         {/* Navigation Links */}
-        <ul className="hidden md:flex items-center text-textColor gap-12">
+        <ul className="hidden md:flex items-center text-textColor gap-15 my-2">
           <li className="hover:text-accent transition duration-300"><a href="#">Home</a></li>
           <li className="hover:text-accent transition duration-300"><a href="#about">About</a></li>
           <li className="hover:text-accent transition duration-300"><a href="#skills">Skills</a></li>
           <li className="hover:text-accent transition duration-300"><a href="#">Projects</a></li>
           <li className="hover:text-accent transition duration-300"><a href="#">Contact</a></li>
-          <li>
+          {/* <li>
             <a 
               href="#"
               target="_blank"
               className="border border-2 border-textColor px-6 py-3 rounded-md font-semibold hover:text-accent buttonHover">
                 Resume
             </a>
-          </li>
+          </li> */}
         </ul>
 
 

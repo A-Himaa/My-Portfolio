@@ -1,6 +1,6 @@
-"use client";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import vscode from "../assets/vs.png";
 import androidSt from "../assets/as.png";
@@ -9,6 +9,7 @@ import github from "../assets/git.png";
 import mongo from "../assets/mongo.png";
 import sql from "../assets/sql.png";
 import figma from "../assets/fig.png";
+import certi from "../assets/cert1.png";
 
 
 export default function Skills() {
@@ -55,16 +56,41 @@ export default function Skills() {
         { name: "Postman", icon: postman },
         { name: "Mongo DB", icon: mongo},
         { name: "MySQL", icon: sql },
-        { name: "Figma", icon: figma },
-        
-        ];
+        { name: "Figma", icon: figma }, 
+    ];
+
+    const certificates = [
+    {
+      title: "AWS Cloud Practitioner Essentials",
+      issuer: "Amazon Web Services",
+      year: "2024",
+      label: "Cloud",
+      img: certi,
+    },
+    {
+      title: "Microsoft Azure Fundamentals (AZ-900)",
+      issuer: "Microsoft Azure",
+      year: "2024",
+      label: "Cloud",
+      img: certi,
+    },
+    {
+      title: "MERN Stack Fundamentals",
+      issuer: "Great Learning Academy",
+      year: "2023",
+      label: "Full Stack",
+      img: certi,
+    },
+  ];
+
 
 
    
 
   return (
-    <section className="w-full bg-bgColor pb-20 min-h-screen"> 
+    <section className="w-full bg-bgColor pb-20"> 
 
+   <div className="py-5">
     <h3 className="font-mono text-base text-textAccent text-center mb-0">
         SKILLS
     </h3>
@@ -73,8 +99,7 @@ export default function Skills() {
         Tools & Skills
     </h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl px-6 gap-10 mt-10"> 
-
+    <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl px-6 gap-20 mt-10"> 
         {/* Skills List - Left */}
         <div>
             <h3 className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-2 tracking-wider rounded-sm">TECHNICAL SKILLS</h3>
@@ -269,8 +294,51 @@ export default function Skills() {
 
 
         </div>
+    </div>
+    </div>
+
+    <div className="py-20">
+        <h2 className="font-bold text-3xl md:text-5xl text-textColor pb-2 leading-tight text-center">
+            Certifications
+        </h2>
+
+        <p className="text-base text-textColor tracking-wide text-center mx-auto max-w-3xl">
+            A collection of verified certifications demonstrating my expertise in full-stack development, 
+            cloud technologies, and core software engineering concepts.
+        </p>
+        
+        {/* Certificate Section */}
+        <div className="py-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {certificates.map((cert, index) => (
+                    <div
+                        key={index}
+                        className="relative bg-accent group"
+                    >
+                        <img
+                            src={cert.img}
+                            alt={cert.title}
+                            className="w-auto h-30 object-cover rounded-lg"
+                        />
+
+                        <span className="absolute top-3 bg-white text-black">{cert.label}</span>
+                        <div className="p-4">
+              <h4 className="text-lg font-semibold text-textColor mb-1">
+                {cert.title}
+              </h4>
+              <p className="text-sm text-mutedText">{cert.issuer}</p>
+              <p className="text-xs mt-1 text-accent/80">{cert.year}</p>
+            </div>
+
+
+                    </div>
+                ))}
+            </div>
+        </div>
+
 
     </div>
+
 
 
 

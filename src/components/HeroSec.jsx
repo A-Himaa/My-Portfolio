@@ -117,8 +117,8 @@ export default function Herosec() {
                     variants={item}
                     className="flex items-center gap-6">
                     <a href="#">
-                        <button className="bg-textAccent text-base md:text-lg font-bold text-bgColor tracking-wide px-5 py-4 rounded-sm mt-2 transition-transform duration-300 hover:scale-[1.1] hover:bg-buttonHover">
-                        Explore My Work
+                        <button className="bg-textAccent text-base md:text-lg font-bold text-bgColor tracking-wide px-4 py-3 rounded-sm mt-2 transition-transform duration-300 hover:scale-[1.1] hover:bg-buttonHover">
+                        Download Resume
                         </button>
                     </a>
 
