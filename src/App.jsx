@@ -4,6 +4,7 @@ import HeroSec from './components/HeroSec';
 import About from './components/AboutMe';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Contacts from './components/Contact';
 
 function App() {
 
@@ -28,6 +29,10 @@ function App() {
 
   <section id="projects">
     <Projects />
+  </section>
+
+  <section id="contact">
+    <Contacts />
   </section>
 
 </div>
