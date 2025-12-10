@@ -3,6 +3,7 @@ import Navbar from './components/NavBar';
 import HeroSec from './components/HeroSec';
 import About from './components/AboutMe';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 function App() {
 
@@ -23,6 +24,10 @@ function App() {
 
   <section id="skills">
     <Skills />
+  </section>
+
+  <section id="projects">
+    <Projects />
   </section>
 
 </div>

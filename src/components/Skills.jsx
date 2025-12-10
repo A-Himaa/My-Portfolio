@@ -297,7 +297,7 @@ export default function Skills() {
     </div>
     </div>
 
-    <div className="py-20">
+    <div className="py-10">
         <h2 className="font-bold text-3xl md:text-5xl text-textColor pb-2 leading-tight text-center">
             Certifications
         </h2>
