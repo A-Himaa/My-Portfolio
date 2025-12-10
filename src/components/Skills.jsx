@@ -309,32 +309,38 @@ export default function Skills() {
         
         {/* Certificate Section */}
         <div className="py-6 max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10">
                 {certificates.map((cert, index) => (
-                    <div
+                  <div
                         key={index}
-                        className="relative bg-accent group"
+                        className="relative bg-[#0F193D] rounded-xl border border-white/10 shadow-lg hover:shadow-accent/20 transition "
                     >
-                        <img
-                            src={cert.img}
-                            alt={cert.title}
-                            className="w-auto h-30 object-cover rounded-lg"
-                        />
+                    <img
+                       src={cert.img}
+                       alt={cert.title}
+                       className="w-full h-50 object-cover rounded-t-xl opacity-80"
+                    />
 
-                        <span className="absolute top-3 bg-white text-black">{cert.label}</span>
-                        <div className="p-4">
-              <h4 className="text-lg font-semibold text-textColor mb-1">
-                {cert.title}
-              </h4>
-              <p className="text-sm text-mutedText">{cert.issuer}</p>
-              <p className="text-xs mt-1 text-accent/80">{cert.year}</p>
-            </div>
-
-
+                    <div className="p-4">
+                        <h4 className="text-lg font-semibold text-textColor mb-1">
+                            {cert.title}
+                        </h4>
+                        <p className="text-sm text-mutedText">{cert.issuer}</p>
+                        <p className="text-xs my-1 text-accent/80">{cert.year}</p>
                     </div>
+                  </div>
                 ))}
+                
+
             </div>
+            <div className="flex justify-center mx-auto">
+                <a href="#">
+                  <button className="border-2 border-accent/80 text-base font-semibold text-textColor tracking-wide px-3 py-3 rounded-md hover:bg-accent/50">
+                    View All Certifications
+                  </button>
+                </a>
         </div>
+      </div>
 
 
     </div>
