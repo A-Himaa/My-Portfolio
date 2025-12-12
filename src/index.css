@@ -6,6 +6,7 @@
   /* Background */
   --color-bgColor: #0A1128;
   --color-accent: #00F0FF;
+  --font-NavtextR: "Rajdhani", sans-serif;
 
   /* Text */
   --color-textColor: #FFFBE8;
@@ -29,32 +30,14 @@
   transition: all 0.3s ease;
 }
 
-
-
-@layer utilities {
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-pulse-slow {
-    animation: pulse 4s ease-in-out infinite;
-  }
-
-  .animate-bounce-slow {
-    animation: bounce 3.5s infinite;
-  }
-
-  .animate-bounce-slower {
-    animation: bounce 5s infinite;
-  }
+/* ----Navigation Hover Effect--- */
+.navigation-hover {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
+.group:hover .navigation-hover {
+  transform: translateY(0);
+  opacity: 1;
+}

@@ -19,7 +19,7 @@ function App() {
     <HeroSec />
   </section>
 
-  <section id="about">
+  {/* <section id="about">
     <About />
   </section>
 
@@ -33,7 +33,7 @@ function App() {
 
   <section id="contact">
     <Contacts />
-  </section>
+  </section> */}
 
 </div>
 

@@ -1,43 +1,43 @@
-import logo1 from "../assets/logo1.png";
-import About from "./AboutMe";
+import { FiDownload } from "react-icons/fi";
 
-export default function Navbar() {
-
+export default function navbar() {
   return (
-    <nav className="w-full bg-bgColor backdrop-blur-md z-50  py-2 fixed z-100"> 
-
-      <div className="flex items-center justify-between max-w-6xl mx-auto px-6 py-4 ">
-
-        {/* Logo */}
-        <div className="flex items-center gap-4">
-          <a href="#"><img
-            src={logo1}
-            className="h-10 w-auto opacity-80"
-            alt="logo" />
-          </a>
-          <span className="text-base font-semibold font-poppins text-secTextColor pt-1">Akila Himaja</span>
-        </div>
-
-        {/* Navigation Links */}
-        <ul className="hidden md:flex items-center text-textColor gap-15 my-2">
-          <li className="hover:text-accent transition duration-300"><a href="#">Home</a></li>
-          <li className="hover:text-accent transition duration-300"><a href="#about">About</a></li>
-          <li className="hover:text-accent transition duration-300"><a href="#skills">Skills</a></li>
-          <li className="hover:text-accent transition duration-300"><a href="#">Projects</a></li>
-          <li className="hover:text-accent transition duration-300"><a href="#">Contact</a></li>
-          {/* <li>
-            <a 
-              href="#"
-              target="_blank"
-              className="border border-2 border-textColor px-6 py-3 rounded-md font-semibold hover:text-accent buttonHover">
-                Resume
-            </a>
-          </li> */}
-        </ul>
-
-
-      </div>
-    </nav>
+    <nav className="w-[75vw] mx-auto py-4 flex justify-between items-center bg-white/5 backdrop-blur-md fixed rounded-full top-4 left-1/2 -translate-x-1/2 z-50 px-7 ">
   
-  );
+      {/*-----Logo-----*/}
+      <div className="flex items-center">
+        <a href="#">
+          <div className="h-10 w-10 bg-gradient-to-br from-blue-700 via-purple-500 to-indigo-900 text-white flex items-center justify-center rounded-lg font-bold text-lg shadow-lg">
+            HT
+          </div>
+        </a>
+      </div>
+
+ 
+      {/*----Navigation Links-----*/}
+      <div>
+        <ul className="hidden md:flex items-center gap-15 text-textColor font-NavtextR font-medium text-lg tracking-wider">
+          {/* <li className="hover:text-accent transition duration-300"><a href="#about">About</a></li> */}
+          <li className="navigation-link"><a href="#skills">Skills</a></li>
+          <li className="navigation-link"><a href="#projects">Projects</a></li>
+          <li className="navigation-link"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      {/*-----Resume Button-----*/}
+      <div>
+        <a 
+          href="#"
+          target="_blank"
+          className="flex items-center gap-2 border text-white border-white/20 px-6 py-2 rounded-full font-semibold font-NavtextR font-medium text-lg tracking-wider backdrop-blur-xl bg-white/7"
+        >
+          Resume
+          <FiDownload size={18} />
+        </a>
+      </div>
+
+
+    </nav>
+
+  )
 }
