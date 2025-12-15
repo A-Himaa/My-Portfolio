@@ -77,10 +77,10 @@ export default function navbar() {
       </div>
 
       {/*-----Resume Button-----*/}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <button className="relative text-white border border-white/20 
-               px-6 py-2 rounded-full font-NavtextR font-medium text-lg tracking-wider
-               backdrop-blur-xl bg-white/7 overflow-hidden group cursor-pointer hover:bg-gradient-to-r hover:from-violet-950 hover:via-purple-900 hover:to-blue-950 hover:border-white/50 hover:scale-105 transition-colors duration-500">
+                             px-6 py-2 rounded-full font-NavtextR font-medium text-lg tracking-wider
+                             backdrop-blur-xl bg-white/7 overflow-hidden group cursor-pointer hover:bg-gradient-to-r hover:from-violet-950 hover:via-purple-900 hover:to-blue-950 hover:border-white/50 hover:scale-105 transition-colors duration-500">
                 <span className="absolute inset-0 bg-white opacity-30 rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] blur-sm transition-transform duration-800"></span>
               <span className="relative flex gap-4 items-center z-10">
                 Resume <FiDownload size={18} />
