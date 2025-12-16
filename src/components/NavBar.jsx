@@ -126,7 +126,7 @@ export default function navbar() {
 
       {/* Bottom Section*/}
       <div className="mt-auto mb-6 bg-white/5 rounded-3xl p-6 border border-white/10">
-        <p className="font-NavtextR font-md text-sm tracking-widest text-white/60 mb-4">CONNECT</p>
+        <p className="font-NavtextR font-md tracking-widest text-white/60 mb-4">CONNECT</p>
 
             <div className="flex gap-4">
               <div className="h-12 w-12 rounded-xl bg-white/10 flex items-center justify-center text-white/80 hover:bg-white/20 transition"><FaLinkedin /></div>
