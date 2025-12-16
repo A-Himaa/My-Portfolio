@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { FaArrowCircleRight } from "react-icons/fa";
 
 export default function HeroSec() {
     const videoRef = useRef(null);
@@ -70,25 +71,32 @@ export default function HeroSec() {
             </div>
 
             {/* Overlay Content */}
-            <div className="relative items-center justify-center flex flex-col mx-auto max-w-3xl min-h-screen gap-1 mt-5">
+            <div className="relative items-center justify-center flex flex-col mx-auto max-w-3xl min-h-screen gap-3 top-8">
 
-                <h3 className="">
+                <h3>
                     <Typewriter textArray={["Software Engineer", "Full-Stack developer", "Creative Technologist"]}/>
                 </h3>
+                
+                <div className="text-center">
+                    <h1 className="font-Herohead text-textColor font-bold text-8xl tracking-wider">HIMAJA</h1>
 
-                <h1 className="font-Herohead text-textColor font-bold text-8xl tracking-wider">HIMAJA</h1>
+                    <h1 className="font-Herohead font-bold text-8xl tracking-wider bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-500 bg-clip-text text-transparent ">
+                        TISSERA
+                    </h1>
+                </div>
+                
+                <h3 className="font-NavtextR text-white/90 text-xl tracking-widest mt-2">Architecting the future web</h3>
 
-                <h1 className="font-Herohead font-bold text-8xl tracking-wider bg-gradient-to-r from-cyan-400 
-                               via-blue-500 to-purple-600 bg-clip-text text-transparent ">TISSERA</h1>
-                <h3>Architecting the future web</h3>
-                <p>
+                <p className="text-white/50 text-center text-base max-w-3xl mt-3">
                     I build scalable and efficient web applications with a focus on user-centric solutions. 
                     Passionate about tackling complex challenges and delivering innovative digital experiences 
                     that combine performance, usability, and creativity.
                 </p>
-                <div>
-                    <button>Contact Me</button>
-                    <button>View My Work</button>
+                
+                <div className="flex mt-6 gap-3 items-center">
+                    <button className="flex items-center gap-2 px-5 py-3 text-xl font-NavtextR text-white tracking-wider rounded-2xl bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 ">View My Work<FaArrowCircleRight /></button>
+                    
+                    <button className="px-6 py-3 text-xl font-NavtextR tracking-wider text-white rounded-2xl border border-white/30 bg-white/5 backdrop-blur-md transition-all duration-300 hover:bg-white/10 hover:border-white/60 hover:scale-105">Contact Me</button>
                 </div>
             </div>
 

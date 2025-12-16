@@ -98,7 +98,7 @@ export default function navbar() {
 
     {/* ========= Mobile Menu =============== */}
 
-    <div className={`fixed inset-0 z-[999] p-5 transition-all duration-500 ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none" } bg-gradient-to-br from-[#0b0f2b] via-[#14174a] to-[#06081f] backdrop-blur-3xl`}>
+    <div className={`fixed inset-0 z-[999] p-5 transition-all duration-500 ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none" } bg-gradient-to-br from-blue-950 via-violet-850 to-violet-900 backdrop-blur-3xl`}>
       <div className="flex justify-between items-center relative right-0">
 
         <div className="flex items-center">
