@@ -1,4 +1,3 @@
-import { Container } from "lucide-react";
 import React, { useRef, useEffect, useState } from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
 
@@ -89,12 +88,35 @@ export default function HeroSec() {
         return () => clearInterval(interval);
     }, []);
 
+    // Sliding Text
+    const textLeft = useRef(null);
+    const textRight = useRef(null);
+
+    useEffect(() => {
+        const onScroll =  () => {
+            const scrollY = window.scrollY;
+            const max = 140;
+            const move = Math.min(scrollY * 0.25, max);
+
+            if(textLeft.current && textRight.current){
+                textLeft.current.style.setProperty("--scroll-x", `${-move}px`);
+                textRight.current.style.setProperty("--scroll-x", `${move}px`);
+            }
+        };
+
+        window.addEventListener("scroll", onScroll);
+        onScroll();
+
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
     return (
+        <>
         <section>
             {/* Video Background */}
             <video 
                 ref={videoRef}
-                className="absolute inset-0 w-full object-cover"
+                className="absolute inset-0 w-full h-full object-center object-cover"
                 src="/src/assets/HeroBg.mp4"
                 autoPlay
                 loop
@@ -115,36 +137,42 @@ export default function HeroSec() {
             </div>
 
             {/* Overlay Content */}
-            <div className="relative items-center justify-center flex flex-col mx-auto max-w-3xl min-h-screen gap-4 top-8">
+            <div className="relative items-center justify-center flex flex-col mx-8 md:mx-auto max-w-3xl min-h-screen gap-2 md:gap-4 top-8">
 
                 <h3>
                     <Typewriter textArray={["Software Engineer", "Full-Stack developer", "Creative Technologist"]}/>
                 </h3>
                 
                 <div className="text-center">
-                    <h1 className="font-Herohead text-textColor font-bold text-8xl tracking-wider">HIMAJA</h1>
+                    <h1 
+                        ref={textLeft}
+                        className="hero-Name left font-Herohead text-textColor font-bold text-3xl md:text-5xl lg:text-8xl tracking-wider">HIMAJA</h1>
 
-                    <h1 className="font-Herohead font-bold text-8xl tracking-wider bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-500 bg-clip-text text-transparent ">
+                    <h1
+                        ref={textRight} 
+                        className="hero-Name right font-Herohead font-bold text-3xl md:text-5xl lg:text-8xl tracking-wider bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-500 bg-clip-text text-transparent ">
                         TISSERA
                     </h1>
                 </div>
                 
                 <h3 className="font-NavtextR text-white/90 text-xl tracking-widest mt-2">Architecting the future web</h3>
 
-                <p className="text-white/50 text-center text-base max-w-3xl mt-3">
+                <p className="text-white/50 text-center text-sm tracking-wide md:tracking-normal md:text-base max-w-3xl mt-3">
                     I build scalable and efficient web applications with a focus on user-centric solutions. 
                     Passionate about tackling complex challenges and delivering innovative digital experiences 
                     that combine performance, usability, and creativity.
                 </p>
                 
                 <div className="flex mt-7 gap-4 items-center">
-                    <button className="flex items-center gap-2 px-5 py-3 text-xl font-NavtextR text-white tracking-wider rounded-2xl bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 hover:scale-105 transition-all duration-300">View My Work<FaArrowCircleRight /></button>
+                    <button className="flex items-center gap-2 px-3 md:px-5 py-3 text-base md:text-xl font-NavtextR text-white tracking-wider rounded-2xl bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 hover:scale-105 transition-all duration-300">View My Work<FaArrowCircleRight /></button>
                     
-                    <button className="px-6 py-3 text-xl font-NavtextR tracking-wider text-white rounded-2xl border border-white/30 bg-white/5 backdrop-blur-md transition-all duration-300 hover:bg-white/10 hover:border-white/60 hover:scale-105">Contact Me</button>
+                    <button className="px-3 md:px-6 py-3 text-base md:text-xl font-NavtextR tracking-wider text-white rounded-2xl border border-white/30 bg-white/5 backdrop-blur-md transition-all duration-300 hover:bg-white/10 hover:border-white/60 hover:scale-105">Contact Me</button>
                 </div>
             </div>
 
         
         </section>
+
+        </>
     )
 }

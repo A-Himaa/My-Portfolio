@@ -76,6 +76,31 @@
   100% { transform: translateY(100%); opacity: 0; }
 }
 
+/* Text Slide */
+.hero-Name {
+  --scroll-x: 0px;
+  will-change: transform;
+  transform: translateX(var(--base-x)) translateX(var(--scroll-x));
+}
 
+.hero-Name.left {
+  --base-x: -140px;
+  animation: enterLeft 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
 
+.hero-Name.right {
+  --base-x: 140px;
+  animation: enterRight 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
 
+@keyframes enterLeft {
+  to {
+    --base-x: 0px;
+  }
+}
+
+@keyframes enterRight {
+  to {
+    --base-x: 0px;
+  }
+}
