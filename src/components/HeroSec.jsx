@@ -93,8 +93,8 @@ export default function HeroSec() {
                     that combine performance, usability, and creativity.
                 </p>
                 
-                <div className="flex mt-6 gap-3 items-center">
-                    <button className="flex items-center gap-2 px-5 py-3 text-xl font-NavtextR text-white tracking-wider rounded-2xl bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 ">View My Work<FaArrowCircleRight /></button>
+                <div className="flex mt-7 gap-4 items-center">
+                    <button className="flex items-center gap-2 px-5 py-3 text-xl font-NavtextR text-white tracking-wider rounded-2xl bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 hover:scale-105 transition-all duration-300">View My Work<FaArrowCircleRight /></button>
                     
                     <button className="px-6 py-3 text-xl font-NavtextR tracking-wider text-white rounded-2xl border border-white/30 bg-white/5 backdrop-blur-md transition-all duration-300 hover:bg-white/10 hover:border-white/60 hover:scale-105">Contact Me</button>
                 </div>
