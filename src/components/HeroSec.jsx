@@ -1,3 +1,4 @@
+import { Container } from "lucide-react";
 import React, { useRef, useEffect, useState } from "react";
 import { FaArrowCircleRight } from "react-icons/fa";
 
@@ -50,6 +51,44 @@ export default function HeroSec() {
         );
     }
 
+    // Dynamic Grid Lines
+    useEffect(() => {
+        const lineContainer = document.getElementById("scan-lines");
+
+        if (!lineContainer) return;
+
+        const lineGridSize = 50;
+        const maxLines = 3;
+
+        const glowLines = () => {
+            if (lineContainer.children.length > maxLines) return;
+
+            const line = document.createElement("div");
+            const isHorizontal = Math.random() > 0.5;
+
+            line.className = `scan ${isHorizontal ? "horizontal" : "vertical"}`;
+
+            if (isHorizontal) {
+                const row = Math.floor(Math.random() * (window.innerHeight / lineGridSize));
+                line.style.top = `${row * lineGridSize}px `;
+            }
+            else {
+                const col = Math.floor(Math.random() * (window.innerWidth / lineGridSize));
+                line.style.left =  `${col * lineGridSize}px `;
+            }
+
+            lineContainer.appendChild(line);
+
+            setTimeout(() => {
+                line.remove();
+            }, 3500);
+        };
+
+        const interval = setInterval(glowLines, 1500);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section>
             {/* Video Background */}
@@ -65,13 +104,18 @@ export default function HeroSec() {
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/50" />
 
+            <div
+                id="scan-lines"
+                className="absolute inset-0 pointer-events-none overflow-hidden">
+            </div>
+
             {/* Grid background */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:50px_50px] 
                             pointer-events-none">
             </div>
 
             {/* Overlay Content */}
-            <div className="relative items-center justify-center flex flex-col mx-auto max-w-3xl min-h-screen gap-3 top-8">
+            <div className="relative items-center justify-center flex flex-col mx-auto max-w-3xl min-h-screen gap-4 top-8">
 
                 <h3>
                     <Typewriter textArray={["Software Engineer", "Full-Stack developer", "Creative Technologist"]}/>

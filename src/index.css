@@ -38,17 +38,43 @@
   transition: opacity 0.2s ease;
 }
 
-/* ----Navigation Hover Effect--- */
-/* .navigation-hover {
-  transform: translateY(50px);
+/* Grid Line */
+.scan {
+  position: absolute;
+  filter: blur(0.6px);
   opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  animation-fill-mode: forwards;
 }
 
-.group:hover .navigation-hover {
-  transform: translateY(0);
-  opacity: 1;
-} */
+.scan.horizontal {
+  height: 1px;
+  width: 100%;
+  left: 0;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.9), transparent);
+  animation: scan-h 2.8s ease-out;
+}
+
+.scan.vertical {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  background: linear-gradient(180deg, transparent, rgba(168,85,247,0.9), transparent);
+  animation: scan-v 3.2s ease-out;
+}
+
+@keyframes scan-h {
+  0% { transform: translateX(-100%); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes scan-v {
+  0% { transform: translateY(-100%); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
 
 
 
