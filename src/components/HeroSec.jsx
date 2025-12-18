@@ -155,12 +155,11 @@ export default function HeroSec() {
                     </h1>
                 </div>
                 
-                <h3 className="font-NavtextR text-white/90 text-xl tracking-widest mt-2">Architecting the future web</h3>
+                <h3 className="font-NavtextR text-white/90 text-base md:text-xl lg:text-2xl tracking-widest mt-2">Architecting the future web</h3>
 
-                <p className="text-white/50 text-center text-sm tracking-wide md:tracking-normal md:text-base max-w-3xl mt-3">
-                    I build scalable and efficient web applications with a focus on user-centric solutions. 
-                    Passionate about tackling complex challenges and delivering innovative digital experiences 
-                    that combine performance, usability, and creativity.
+                <p className="text-white/60 text-center text-sm mx-5 mx:px-0 tracking-wide md:tracking-w md:text-lg max-w-3xl mt-3">
+                    I’m an aspiring software engineer who builds scalable and efficient web applications with a user-first mindset. 
+                    Passionate about learning and innovation, I turn complex ideas into modern, future-focused digital experiences.
                 </p>
                 
                 <div className="flex mt-7 gap-4 items-center">
