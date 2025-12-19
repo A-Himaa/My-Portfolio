@@ -11,7 +11,7 @@ function App() {
   return (
     <>
 
-    <div className="min-h-screen w-full relative overflow-hidden bg-gradient-to-br from-[#060B1A] via-[#0C1B3D] to-[#060B1A] ">
+    <div className="min-h-screen w-full relative overflow-hidden">
   
   <Navbar />
 
@@ -19,11 +19,11 @@ function App() {
     <HeroSec />
   </section>
 
-  {/* <section id="about">
+  <section id="about">
     <About />
   </section>
 
-  <section id="skills">
+  {/* <section id="skills">
     <Skills />
   </section>
 

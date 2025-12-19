@@ -116,7 +116,7 @@ export default function HeroSec() {
             {/* Video Background */}
             <video 
                 ref={videoRef}
-                className="absolute inset-0 w-full h-full object-center object-cover"
+                className="absolute inset-0 w-full h-screen object-center object-cover"
                 src="/src/assets/HeroBg.mp4"
                 autoPlay
                 loop
@@ -128,16 +128,16 @@ export default function HeroSec() {
 
             <div
                 id="scan-lines"
-                className="absolute inset-0 pointer-events-none overflow-hidden">
+                className="absolute inset-0 pointer-events-none overflow-hidden h-screen">
             </div>
 
             {/* Grid background */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:50px_50px] 
-                            pointer-events-none">
+                            pointer-events-none h-screen">
             </div>
 
             {/* Overlay Content */}
-            <div className="relative items-center justify-center flex flex-col mx-8 md:mx-auto max-w-3xl min-h-screen gap-2 md:gap-4 top-8">
+            <div className="relative items-center justify-center flex flex-col mx-8 md:mx-auto max-w-3xl min-h-screen gap-2 md:gap-4 top-8 h-screen">
 
                 <h3>
                     <Typewriter textArray={["Software Engineer", "Full-Stack developer", "Creative Technologist"]}/>
