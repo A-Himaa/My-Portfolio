@@ -3,6 +3,7 @@ import Navbar from './components/NavBar';
 import HeroSec from './components/HeroSec';
 import About from './components/AboutMe';
 import Skills from './components/Skills';
+import Marqee from './components/Marqee';
 import Projects from './components/Projects';
 import Contacts from './components/Contact';
 
@@ -19,15 +20,21 @@ function App() {
     <HeroSec />
   </section>
 
+    {/* <section id="marqee">
+    <Marqee />
+  </section> */}
+
   <section id="about">
     <About />
   </section>
 
   {/* <section id="skills">
     <Skills />
-  </section>
+  </section> */}
 
-  <section id="projects">
+
+
+  {/* <section id="projects">
     <Projects />
   </section>
 
