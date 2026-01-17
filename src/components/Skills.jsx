@@ -82,274 +82,28 @@ export default function Skills() {
       img: certi,
     },
   ];
-
-
-
    
 
   return (
-    <section className="w-full bg-bgColor pb-20"> 
+    <section className="bg-gradient-to-b from-[#061936] to-[#041024] min-h-screen text-center">
 
-   <div className="py-5">
-    <h3 className="font-mono text-base text-textAccent text-center mb-0">
-        SKILLS
-    </h3>
+        <div className="relative space-y-6">
+            <div className="inline-flex p-[1.5px] rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 opacity-90 to-fuchsia-500 shadow-[0_0_25px_rgba(139,92,246,0.45)]">
+                <button className="px-5 rounded-full py-1 bg-[#060321] text-white/90 font-NavtextR backdrop-blur-md">Skills</button>
+            </div>
 
-    <h2 className="font-bold text-3xl md:text-5xl text-textColor pb-2 leading-tight text-center">
-        Tools & Skills
-    </h2>
+            <h2 className="text-textColor font-Herohead font-semibold text-2xl md:text-4xl">
+                <span className="bg-gradient-to-r text-4xl md:text-5xl from-indigo-600 via-purple-600 to-fuchsia-500 bg-clip-text text-transparent">S</span>KILL MATRIX
+            </h2>
+        </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl px-6 gap-20 mt-10"> 
-        {/* Skills List - Left */}
-        <div>
-            <h3 className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-2 tracking-wider rounded-sm">TECHNICAL SKILLS</h3>
 
-            {/* Technical skils tabs */}
-            {["Frontend", "Backend", "Other"].map((tab) => (
-                <button
-                  key = {tab}
-                  onClick = {() => setActiveTab(tab)}
-                  className={`text-textAccent border border-textAccent/50 rounded-3xl text-sm px-4 py-2 my-5 inline-block w-fit mr-2 ${
-                  activeTab === tab
-                    ? "bg-accent/50 px-2 text-textColor"
-                    : "text-textAccent hover:text-accent"
-                  }`}>  
-                {tab}                       
-                </button>
-            ))}
-                    
-
-            {/* Skills Bar */}
-            <div className="max-w-3xl">
-            {/* Frontend Skills */}
-              {activeTab === "Frontend" && frontendSkills && (
-                <div>
-                    {frontendSkills.map((skill, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.05 }}
-                            viewport={{ once: true }}
-                            className="mb-4"
-                        >
-                        <div className="flex justify-between mb-1">
-                            <span className="text-textColor font-medium">{skill.name}</span>
-                            <span className="text-textColor/70">{skill.level}%</span>
-                        </div>
-
-                        <div className="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
-                            <motion.div
-                                initial={{ width: 0 }}
-                                whileInView={{ width: `${skill.level}%` }}
-                                transition={{ duration: 1.2, ease: "easeInOut" }}
-                                viewport={{ once: true }}
-                                className="h-full bg-gradient-to-r from-[#00F0FF]/60 to-[#02B4D4]/60 rounded-full"
-                            >
-                            </motion.div>
-                        </div>
-
-                        </motion.div>
-                    ))}
-                </div>
-              )}
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto">
             
-             {/* Backend Skills */}
-              {activeTab === "Backend" && BackendSkills && (
-                <div>
-                    {BackendSkills.map((skill, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.05 }}
-                            viewport={{ once: true }}
-                            className="mb-3"
-                        >
-                        <div className="flex justify-between mb-1">
-                            <span className="text-textColor font-medium">{skill.name}</span>
-                            <span className="text-textColor/70">{skill.level}%</span>
-                        </div>
-
-                        <div className="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
-                            <motion.div
-                                initial={{ width: 0 }}
-                                whileInView={{ width: `${skill.level}%` }}
-                                transition={{ duration: 1.2, ease: "easeInOut" }}
-                                viewport={{ once: true }}
-                                className="h-full bg-gradient-to-r from-[#00F0FF]/60 to-[#02B4D4]/60 rounded-full"
-                            >
-                            </motion.div>
-                        </div>
-
-                        </motion.div>
-                    ))}
-                </div>
-              )}
-
-             {/* Other Skills */}
-              {activeTab === "Other" && OtherSkills && (
-                <div>
-                    {OtherSkills.map((skill, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.05 }}
-                            viewport={{ once: true }}
-                            className="mb-3"
-                        >
-                        <div className="flex justify-between mb-1">
-                            <span className="text-textColor font-medium">{skill.name}</span>
-                            <span className="text-textColor/70">{skill.level}%</span>
-                        </div>
-
-                        <div className="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
-                            <motion.div
-                                initial={{ width: 0 }}
-                                whileInView={{ width: `${skill.level}%` }}
-                                transition={{ duration: 1.2, ease: "easeInOut" }}
-                                viewport={{ once: true }}
-                                className="h-full bg-gradient-to-r from-[#00F0FF]/60 to-[#02B4D4]/60 rounded-full"
-                            >
-                            </motion.div>
-                        </div>
-
-                        </motion.div>
-                    ))}
-                </div>
-              )}
-            </div>  
         </div>
 
-        {/* Professional Skills - Right */}
-        <div>
-            <h3 className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-2 tracking-wider rounded-sm">PROFESSIONAL SKILLS</h3>
-
-            {/* Doughnut Charts */}
-            <div className="grid grid-cols-1 md:grid-cols-3 justify-center my-6">
-                {professionalSkills.map((skill, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="flex flex-col items-center bg-[#0A1128]/60 p-4 rounded-2xl shadow-md"
-                    >
-
-                    {/* Label on top */}
-                    <span className="text-sm md:text-base font-medium text-textColor mb-3">
-                        {skill.name}
-                    </span>
-
-                {/* Doughnut chart */}
-                <div className="w-25 h-25">
-                    <CircularProgressbar
-                    value={skill.level}
-                    text={`${skill.level}%`}
-                    strokeWidth={12}
-                    styles={buildStyles({
-                        pathColor: "url(#grad1)",
-                        textColor: "#FFFBE8",
-                        trailColor: "#0A1128",
-                        textSize: "16px",
-                        strokeLinecap: "round",
-                        pathTransitionDuration: 1.5,
-                    })}
-                    />
-
-                    {/* Gradient definition */}
-                    <svg style={{ height: 0 }}>
-                    <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#00F0FF" stopOpacity="0.6" />
-                        <stop offset="100%" stopColor="#02B4D4" stopOpacity="0.6" />
-                        </linearGradient>
-                    </defs>
-                    </svg>
-                </div>
-                </motion.div>
-            ))}
-        </div>
-        
-        <h3 className="font-mono text-sm md:text-base bg-accent/20 text-gray-100/90 px-2 py-2 tracking-wider rounded-sm my-6 mt-10">TOOL KIT</h3>
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-7">
-            {tools.map((tool, index) => (
-            <div key={index} className="flex items-center">
-                <img
-                src={tool.icon}
-                alt={tool.name}
-                className="w-10 h-10 md:w-12 md:h-12 object-contain opacity-65 hover:opacity-100 transition-opacity duration-300"
-                />
-
-                {/* Vertical line separator, skip after every 2nd icon */}
-                {(index + 1) % 2 === 0 && index !== tools.length - 1 && (
-                <span className="w-px h-6 bg-gray-600 mx-4"></span>
-                )}
-            </div>
-            ))}
-      </div>
-        
-
-
-        </div>
-    </div>
-    </div>
-
-    <div className="py-10">
-        <h2 className="font-bold text-3xl md:text-5xl text-textColor pb-2 leading-tight text-center">
-            Certifications
-        </h2>
-
-        <p className="text-base text-textColor tracking-wide text-center mx-auto max-w-3xl">
-            A collection of verified certifications demonstrating my expertise in full-stack development, 
-            cloud technologies, and core software engineering concepts.
-        </p>
-        
-        {/* Certificate Section */}
-        <div className="py-6 max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10">
-                {certificates.map((cert, index) => (
-                  <div
-                        key={index}
-                        className="relative bg-[#0F193D] rounded-xl border border-white/10 shadow-lg hover:shadow-accent/20 transition "
-                    >
-                    <img
-                       src={cert.img}
-                       alt={cert.title}
-                       className="w-full h-50 object-cover rounded-t-xl opacity-80"
-                    />
-
-                    <div className="p-4">
-                        <h4 className="text-lg font-semibold text-textColor mb-1">
-                            {cert.title}
-                        </h4>
-                        <p className="text-sm text-mutedText">{cert.issuer}</p>
-                        <p className="text-xs my-1 text-accent/80">{cert.year}</p>
-                    </div>
-                  </div>
-                ))}
-                
-
-            </div>
-            <div className="flex justify-center mx-auto">
-                <a href="#">
-                  <button className="border-2 border-accent/80 text-base font-semibold text-textColor tracking-wide px-3 py-3 rounded-md hover:bg-accent/50">
-                    View All Certifications
-                  </button>
-                </a>
-        </div>
-      </div>
-
-
-    </div>
-
-
-
-
-    
     </section>
+
   )
 }
 
