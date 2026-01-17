@@ -1,5 +1,6 @@
+import { Github } from "lucide-react";
 import React, { useRef, useEffect, useState } from "react";
-import { FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowCircleRight, FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function HeroSec() {
     const videoRef = useRef(null);
@@ -136,6 +137,42 @@ export default function HeroSec() {
                             pointer-events-none h-screen">
             </div>
 
+            {/* Floating icons */}
+            <div className="absolute right-6 top-35 z-30 hidden mdhidden lg:flex flex-col items-center gap-4">
+                
+                <div className="w-px bg-white/30 h-40"></div>
+
+                <div className="flex flex-col gap-4">
+                    <a 
+                       href="https://www.linkedin.com/in/akila-himaja-4b5076314/"
+                       target="_blank"
+                       className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/20 
+                                  text-white hover:bg-white/30 hover:scale-110 transition-all duration-300">
+                            <FaLinkedinIn />
+                    </a>
+
+                    <a 
+                       href="https://github.com/A-Himaa"
+                       target="_blank"
+                       className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/20 
+                                  text-white hover:bg-white/30 hover:scale-110 transition-all duration-300">
+                            <FaGithub />
+                    </a>
+
+                    <a 
+                       href=""
+                       target="_blank"
+                       className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/20 
+                                  text-white hover:bg-white/30 hover:scale-110 transition-all duration-300">
+                            <FaEnvelope />
+                    </a>
+                </div>
+
+                <div className="w-px bg-white/30 h-40"></div>
+
+
+            </div>
+
             {/* Overlay Content */}
             <div className="relative items-center justify-center flex flex-col mx-8 md:mx-auto max-w-3xl min-h-screen gap-2 md:gap-4 top-8 h-screen">
 
@@ -163,14 +200,30 @@ export default function HeroSec() {
                 </p>
                 
                 <div className="flex mt-7 gap-4 items-center">
-                    <button className="flex items-center gap-2 px-3 md:px-5 py-3 text-base md:text-xl font-NavtextR text-white tracking-wider rounded-2xl bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 hover:scale-105 transition-all duration-300">View My Work<FaArrowCircleRight /></button>
-                    
-                    <button className="px-3 md:px-6 py-3 text-base md:text-xl font-NavtextR tracking-wider text-white rounded-2xl border border-white/30 bg-white/5 backdrop-blur-md transition-all duration-300 hover:bg-white/10 hover:border-white/60 hover:scale-105">Contact Me</button>
+                    <button className="relative text-white px-3 md:px-5 py-3 rounded-2xl font-NavtextR text-base md:text-xl tracking-wider
+                                       bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 overflow-hidden group cursor-pointer 
+                                       hover:bg-gradient-to-r hover:from-violet-950 hover:via-purple-900 hover:to-blue-950 hover:border-white/50 
+                                       hover:scale-105 transition-all duration-300">
+                        <span className="absolute inset-0 bg-white opacity-30 rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] blur-sm transition-transform duration-800"></span>
+                        <span className="relative flex gap-4 items-center z-10">
+                            View My Work<FaArrowCircleRight />
+                        </span>
+                    </button>
+
+                    <button className="relative text-white px-3 md:px-6 py-3 rounded-2xl font-NavtextR text-base md:text-xl tracking-wider
+                                       border border-white/30 bg-white/5 backdrop-blur-md overflow-hidden group cursor-pointer 
+                                      transition-all duration-300 hover:bg-white/10 hover:border-white/60 hover:scale-105">
+                        <span className="absolute inset-0 bg-white opacity-30 rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] blur-sm transition-transform duration-800"></span>
+                        <span className="relative flex gap-4 items-center z-10">
+                            Contact Me
+                        </span>
+                    </button>
                 </div>
             </div>
-
         
         </section>
+
+
 
         </>
     )

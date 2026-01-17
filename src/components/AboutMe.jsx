@@ -40,7 +40,7 @@ export default function About(){
   ]
 
   return(
-    <section className="min-h-screen bg-gradient-to-b from-[#061936] via-[#472382] to-[#041024]">
+    <section className="min-h-screen bg-gradient-to-b from-[#061936] via-[#472382] to-[#041024] pt-20 md:pt-10">
       
       <div className="grid grid cols-1 md:grid-cols-2 max-w-6xl mx-auto md:pt-28">
 

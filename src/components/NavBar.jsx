@@ -78,9 +78,9 @@ export default function navbar() {
 
       {/*-----Resume Button-----*/}
         <div className="hidden lg:block">
-          <button className="relative text-white border border-white/20 
-                             px-6 py-2 rounded-full font-NavtextR font-medium text-lg tracking-wider
-                             backdrop-blur-xl bg-white/7 overflow-hidden group cursor-pointer hover:bg-gradient-to-r hover:from-violet-950 hover:via-purple-900 hover:to-blue-950 hover:border-white/50 hover:scale-105 transition-colors duration-500">
+          <button className="relative text-white border border-white/20 px-6 py-2 rounded-full font-NavtextR font-medium text-lg tracking-wider
+                             backdrop-blur-xl bg-white/7 overflow-hidden group cursor-pointer hover:bg-gradient-to-r hover:from-violet-950 
+                             hover:via-purple-900 hover:to-blue-950 hover:border-white/50 hover:scale-105 transition-colors duration-500">
                 <span className="absolute inset-0 bg-white opacity-30 rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] blur-sm transition-transform duration-800"></span>
               <span className="relative flex gap-4 items-center z-10">
                 Resume <FiDownload size={18} />
@@ -116,12 +116,12 @@ export default function navbar() {
           </button>
         </div>
 
-      <div className="flex flex-col gap-4 mt-5 mb-4">
-        <MobileItem icon={<HiOutlineSquares2X2 />} label="HOME" />
-        <MobileItem icon={<BsPerson />} label="ABOUT" />
-        <MobileItem icon={<BsCodeSlash />} label="SKILLS" />
-        <MobileItem icon={<MdOutlineWorkOutline />} label="PROJECTS" />
-        <MobileItem icon={<BsChat />} label="CONTACT" />
+      <div className="flex flex-col gap-2 mt-4 mb-2">
+        <MobileItem icon={<HiOutlineSquares2X2 />} label="HOME" target="#" onClick={() => setOpenMenu(false)} />
+        <MobileItem icon={<BsPerson />} label="ABOUT" target="#about" onClick={() => setOpenMenu(false)} />
+        <MobileItem icon={<BsCodeSlash />} label="SKILLS" target="#skills" onClick={() => setOpenMenu(false)} />
+        <MobileItem icon={<MdOutlineWorkOutline />} label="PROJECTS" target="#projects" onClick={() => setOpenMenu(false)} />
+        <MobileItem icon={<BsChat />} label="CONTACT" target="#contact" onClick={() => setOpenMenu(false)} />
       </div>
 
       {/* Bottom Section*/}
@@ -145,8 +145,12 @@ export default function navbar() {
 }
 
 // Helping Function
-const MobileItem = ({ icon, label}) => (
-  <a className="flex items-center gap-4 px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 hover-border-white/30 transition">
+const MobileItem = ({ icon, label, target, onClick}) => (
+  <a 
+    href={target}
+    onClick={onClick}
+    className="flex items-center gap-4 px-5 py-4 rounded-2xl bg-white/5 border border-white/10 
+               text-white/80 hover:bg-white/10 hover-border-white/30 transition">
     {icon}
     <span className="tracking-wider font-NavtextR font-lg">{label}</span>
   </a>

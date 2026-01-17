@@ -20,9 +20,9 @@ function App() {
     <HeroSec />
   </section>
 
-    {/* <section id="marqee">
+    <section id="marqee">
     <Marqee />
-  </section> */}
+  </section>
 
   <section id="about">
     <About />
