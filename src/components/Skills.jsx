@@ -106,10 +106,10 @@ export default function Skills() {
   ]
 
   const skillStyle = {
-    frontend: "border-cyan-400/40 shadow-[0_0_12px_rgba(34,211,238,0.6)]",
-    backend: "border-violet-400/40 shadow-[0_0_12px_rgba(167,139,250,0.6)]",
-    data: "border-emerald-400/40 shadow-[0_0_12px_rgba(52,211,153,0.6)]",
-    programming: "border-orange-400/40 shadow-[0_0_12px_rgba(251,146,60,0.6)]",
+    frontend: "border-cyan-800/80 shadow-[0_0_8px_rgba(24,121,153,0.8)] text-cyan-800",
+    backend: "border-violet-400/40 shadow-[0_0_8px_rgba(167,139,250,0.6)] text-violet-400",
+    data: "border-fuchsia-600/40 shadow-[0_0_8px_rgba(182,82,199,0.6)] text-fuchsia-600",
+    programming: "border-white/40 shadow-[0_0_8px_rgba(255,255,255,0.4)] text-white",
   }
 
   const skillBars = [
@@ -136,26 +136,29 @@ export default function Skills() {
         <div className="relative min-h-screen">
           
            {/* Grid Background */}
-          <div className="absolute mt-15 h-screen inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:60px_60px]" />
+          <div className="absolute mt-10 h-screen inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-          <div className="pt-20 grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl gap-10">
-            <div className="relative rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl p-10">
+          
+          <div className="pt-25 grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl gap-12">
+
+            {/* Left Section */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/12 backdrop-blur-xl p-10 flex items-center shadow-inner shadow-white/15">
               <div className="flex flex-wrap gap-4">
                 {skillContainer.map((skills, i) => (
                   <span
                     key={i}
-                    className={`px-4 py-2 rounded-full text-sm border text-white ${skillStyle[skills.title]}`}>
+                    className={`px-4 mx-1 py-2 rounded-full font-NavtextR text-sm border ${skillStyle[skills.title]}`}>
                       {skills.name}
                     </span>
                 ))}
               </div>
             </div>
 
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-8">
                 {skillBars.map((bar, i) => (
                   <div key={i}>
 
-                    <p className="text-sm text-white/50 mb-1">
+                    <p className="text-xs text-left text-white/50 mb-1">
                       {bar.label}
                     </p>
 
