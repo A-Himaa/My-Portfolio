@@ -10,6 +10,7 @@ import mongo from "../assets/mongo.png";
 import sql from "../assets/sql.png";
 import figma from "../assets/fig.png";
 import certi from "../assets/cert1.png";
+import { title } from "framer-motion/client";
 
 
 export default function Skills() {
@@ -81,27 +82,44 @@ export default function Skills() {
 //       img: certi,
 //     },
 //   ];
-   
-const skillsLeft = [
-  "HTML / CSS",
-  "ADOBE PHOTOSHOP",
-  "OPENCART",
-  "WORDPRESS",
-  "DREAMWEAVER",
-  "JQUERY",
-  "JAVA",
-  "JAVASCRIPT",
-  "MANAGEMENT",
-  "LEADERSHIP",
-  "PYTHON",
-];
 
-const bars = [
-  { title: "WordPress Core", label: "INTERFACE ENGINE", value: 85, color: "cyan" },
-  { title: "OpenCart / E-commerce", label: "DATABASE ARCH", value: 72, color: "violet" },
-  { title: "Fullstack JS / React", label: "LOGIC & LOGIC FLOW", value: 94, color: "cyan" },
-  { title: "UI/UX & Motion Design", label: "CREATIVE SYSTEMS", value: 90, color: "violet" },
-];
+  const skillContainer = [
+    {name: "HTML5", title: "frontend"},
+    {name: "Node.js", title: "backend"},
+    {name: "React", title: "frontend"},
+    {name: "JavaScript", title: "frontend"},
+    {name: "Python", title: "programming"},
+    {name: "CSS3", title: "frontend"},
+    {name: "MongoDB", title: "data"},
+    {name: "REST API", title: "backend"},
+    {name: "Tailwind CSS", title: "frontend"},
+    {name: "TypeScript", title: "frontend"},
+    {name: "C++", title: "programming"},
+    {name: "Next.js", title: "frontend"},    
+    {name: "Express.js", title: "backend"},
+    {name: "PHP", title: "backend"},
+    {name: "Laravel", title: "backend"},    
+    {name: "Java", title: "backend"},    
+    {name: "MySQL", title: "data"},
+    {name: "C", title: "programming"},
+    {name: "Kotlin", title: "programming"},
+  ]
+
+  const skillStyle = {
+    frontend: "border-cyan-400/40 shadow-[0_0_12px_rgba(34,211,238,0.6)]",
+    backend: "border-violet-400/40 shadow-[0_0_12px_rgba(167,139,250,0.6)]",
+    data: "border-emerald-400/40 shadow-[0_0_12px_rgba(52,211,153,0.6)]",
+    programming: "border-orange-400/40 shadow-[0_0_12px_rgba(251,146,60,0.6)]",
+  }
+
+  const skillBars = [
+    {title: "Frontend Engineering", label: "SCALABLE & RESPONSIVE UI", value: 85, color:"blue"},
+    {title: "Core Programming & Systems", label: "PROBLEM SOLVING & PROGRAMMING", value: 73, color:"blue"},
+    {title: "Backend & API Engineering", label: "ROBUST API & BACKEND SERVICES", value: 80, color:"blue"},
+    {title: "Data & Persistence", label: "DATA MANAGEMENT", value: 78, color:"blue"},
+  ]
+
+
   return (
     <section className="bg-gradient-to-b from-[#061936] via-[#11104A] to-[#041024] min-h-screen text-center">
 
@@ -120,10 +138,52 @@ const bars = [
            {/* Grid Background */}
           <div className="absolute mt-15 h-screen inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl">
-            <div className=""></div>
+          <div className="pt-20 grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl gap-10">
+            <div className="relative rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl p-10">
+              <div className="flex flex-wrap gap-4">
+                {skillContainer.map((skills, i) => (
+                  <span
+                    key={i}
+                    className={`px-4 py-2 rounded-full text-sm border text-white ${skillStyle[skills.title]}`}>
+                      {skills.name}
+                    </span>
+                ))}
+              </div>
+            </div>
 
-            <div></div>
+            <div className="flex flex-col gap-10">
+                {skillBars.map((bar, i) => (
+                  <div key={i}>
+
+                    <p className="text-sm text-white/50 mb-1">
+                      {bar.label}
+                    </p>
+
+                    <div className="flex justify-between items-end mb-2">
+                      <h3 className="text-lg font-semibold text-white/50">
+                        {bar.title}
+                      </h3>
+                      <span className={`text-xl font-bold ${bar.color === "cyan" ? "text-cyan-400" : "text-violet-400"}`}>
+                        {bar.value}%
+                      </span>
+                    </div>
+
+                    <div className="h-2 rounded-full bg-white/10 overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${bar.value}%` }}
+                  transition={{ duration: 1.2, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  className={`h-full rounded-full ${
+                    bar.color === "cyan"
+                      ? "bg-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.8)]"
+                      : "bg-violet-400 shadow-[0_0_18px_rgba(167,139,250,0.8)]"
+                  }`}
+                />
+              </div>
+                  </div>
+                ))}
+            </div>
 
           </div>
 
