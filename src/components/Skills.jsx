@@ -85,39 +85,47 @@ export default function Skills() {
 
   const skillContainer = [
     {name: "HTML5", title: "frontend"},
-    {name: "Node.js", title: "backend"},
     {name: "React", title: "frontend"},
-    {name: "JavaScript", title: "frontend"},
-    {name: "Python", title: "programming"},
     {name: "CSS3", title: "frontend"},
+    {name: "Tailwind CSS", title: "frontend"},
+    {name: "Next.js", title: "frontend"},
+    {name: "Node.js", title: "backend"},  
+    {name: "Python", title: "programming"},
     {name: "MongoDB", title: "data"},
     {name: "REST API", title: "backend"},
-    {name: "Tailwind CSS", title: "frontend"},
-    {name: "TypeScript", title: "frontend"},
     {name: "C++", title: "programming"},
-    {name: "Next.js", title: "frontend"},    
+    {name: "JavaScript", title: "frontend"},
     {name: "Express.js", title: "backend"},
     {name: "PHP", title: "backend"},
     {name: "Laravel", title: "backend"},    
     {name: "Java", title: "backend"},    
     {name: "MySQL", title: "data"},
     {name: "C", title: "programming"},
+    {name: "TypeScript", title: "frontend"},
     {name: "Kotlin", title: "programming"},
   ]
 
   const skillStyle = {
-    frontend: "border-cyan-800/80 shadow-[0_0_8px_rgba(24,121,153,0.8)] text-cyan-800",
+    frontend: "border-blue-400 shadow-[0_0_8px_rgba(24,121,153,0.8)] text-blue-400",
     backend: "border-violet-400/40 shadow-[0_0_8px_rgba(167,139,250,0.6)] text-violet-400",
     data: "border-fuchsia-600/40 shadow-[0_0_8px_rgba(182,82,199,0.6)] text-fuchsia-600",
-    programming: "border-white/40 shadow-[0_0_8px_rgba(255,255,255,0.4)] text-white",
+    programming: "border-indigo-200 shadow-[0_0_8px_rgba(255,255,255,0.4)] text-indigo-200",
   }
 
   const skillBars = [
     {title: "Frontend Engineering", label: "SCALABLE & RESPONSIVE UI", value: 85, color:"blue"},
-    {title: "Core Programming & Systems", label: "PROBLEM SOLVING & PROGRAMMING", value: 73, color:"blue"},
-    {title: "Backend & API Engineering", label: "ROBUST API & BACKEND SERVICES", value: 80, color:"blue"},
-    {title: "Data & Persistence", label: "DATA MANAGEMENT", value: 78, color:"blue"},
+    {title: "Core Programming & Systems", label: "PROBLEM SOLVING & PROGRAMMING", value: 73, color:"violet"},
+    {title: "Backend & API Engineering", label: "ROBUST API & BACKEND SERVICES", value: 80, color:"fuchsia"},
+    {title: "Data & Persistence", label: "DATA MANAGEMENT", value: 78, color:"white"},
   ]
+
+  const barColors = (color) =>
+  ({
+    blue: "text-blue-400",
+    violet: "text-violet-400",
+    fuchsia: "text-fuchsia-600",
+  }[color] || "text-indigo-200");
+
 
 
   return (
@@ -142,53 +150,58 @@ export default function Skills() {
           <div className="pt-25 grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl gap-12">
 
             {/* Left Section */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/12 backdrop-blur-xl p-10 flex items-center shadow-inner shadow-white/15">
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-10 flex items-center shadow-inner shadow-white/15 mx-3">
               <div className="flex flex-wrap gap-4">
                 {skillContainer.map((skills, i) => (
                   <span
                     key={i}
-                    className={`px-4 mx-1 py-2 rounded-full font-NavtextR text-sm border ${skillStyle[skills.title]}`}>
+                    className={`px-4 mx-1 py-2 rounded-full font-NavtextR text-base font-semibold border ${skillStyle[skills.title]}`}>
                       {skills.name}
                     </span>
                 ))}
               </div>
             </div>
 
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-9">
                 {skillBars.map((bar, i) => (
                   <div key={i}>
 
-                    <p className="text-xs text-left text-white/50 mb-1">
+                    <p className="text-sm text-left text-white/50 mb-1 tracking-widest font-NavtextR">
                       {bar.label}
                     </p>
 
                     <div className="flex justify-between items-end mb-2">
-                      <h3 className="text-lg font-semibold text-white/50">
+                      <h3 className="text-lg font-semibold text-white/80">
                         {bar.title}
                       </h3>
-                      <span className={`text-xl font-bold ${bar.color === "cyan" ? "text-cyan-400" : "text-violet-400"}`}>
+                      <span className={`text-xl font-semibold font-NavtextR tracking-wider ${barColors(bar.color)}`}>
                         {bar.value}%
                       </span>
                     </div>
 
-                    <div className="h-2 rounded-full bg-white/10 overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${bar.value}%` }}
-                  transition={{ duration: 1.2, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                  className={`h-full rounded-full ${
-                    bar.color === "cyan"
-                      ? "bg-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.8)]"
-                      : "bg-violet-400 shadow-[0_0_18px_rgba(167,139,250,0.8)]"
-                  }`}
-                />
-              </div>
+                    <div className="h-3 rounded-full bg-white/10 overflow-hidden border border-white/20">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${bar.value}%` }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className={`h-[50%] rounded-full mt-[1.7px] ml-[4px]   ${
+                          bar.color === "blue"
+                            ? "bg-blue-400 shadow-[0_0_18px_rgba(34,211,238,0.8)]"
+                            : bar.color === "violet"? "bg-violet-400 shadow-[0_0_18px_rgba(167,139,250,0.8)]"
+                            : bar.color === "fuchsia" ? "bg-fuchsia-400 shadow-[0_0_18px_rgba(167,139,250,0.8)]"
+                            : "bg-indigo-200 shadow-[0_0_18px_rgba(167,139,250,0.8)]"
+                        }`}
+                      />
+                    </div>
                   </div>
                 ))}
-            </div>
+            </div>         
 
           </div>
+
+          <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-10 flex items-center shadow-inner shadow-white/15 mx-3">
+            </div>
 
         </div>
 
