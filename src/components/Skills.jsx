@@ -114,9 +114,9 @@ export default function Skills() {
 
   const skillBars = [
     {title: "Frontend Engineering", label: "SCALABLE & RESPONSIVE UI", value: 85, color:"blue"},
-    {title: "Core Programming & Systems", label: "PROBLEM SOLVING & PROGRAMMING", value: 73, color:"violet"},
+    {title: "Core Programming & Systems", label: "PROBLEM SOLVING & PROGRAMMING", value: 70, color:"violet"},
     {title: "Backend & API Engineering", label: "ROBUST API & BACKEND SERVICES", value: 80, color:"fuchsia"},
-    {title: "Data & Persistence", label: "DATA MANAGEMENT", value: 78, color:"white"},
+    {title: "Data & Persistence", label: "DATA MANAGEMENT", value: 72, color:"white"},
   ]
 
   const barColors = (color) =>
@@ -147,19 +147,133 @@ export default function Skills() {
           <div className="absolute mt-10 h-screen inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
           
-          <div className="pt-25 grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl gap-12">
+          <div className="pt-25 grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl gap-10">
 
             {/* Left Section */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-10 flex items-center shadow-inner shadow-white/15 mx-3">
-              <div className="flex flex-wrap gap-4">
-                {skillContainer.map((skills, i) => (
-                  <span
-                    key={i}
-                    className={`px-4 mx-1 py-2 rounded-full font-NavtextR text-base font-semibold border ${skillStyle[skills.title]}`}>
-                      {skills.name}
-                    </span>
-                ))}
-              </div>
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-8 shadow-inner shadow-white/15 mx-3">
+
+            {/* Languages */}
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-[5px] bg-indigo-600 rounded-3xl" />              
+              <p className="text-2xl font-NavtextR font-semibold bg-gradient-to-r from-indigo-600 via-fuchsia-400 to-purple-300 bg-clip-text text-transparent">
+                LANGUAGES
+              </p>
+            </div>
+
+            {/* Line 1 */}
+            <div className="relative flex items-center mt-3">
+
+            {/* html */}
+            <div className="relative flex rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div>
+
+            {/* CSS */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div>
+
+            {/* Tailwind */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div>
+
+            {/* Javascript */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div> 
+
+            {/* Python */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div> 
+
+            {/* PHP */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div>           
+            </div>
+
+            {/* Line 2 */}
+            <div className="relative flex items-center mt-3">
+
+            {/* C */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div>
+
+            {/* C++ */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div>
+
+            {/* Java */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div>
+
+            {/* Typescript */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div> 
+
+            {/* Kotlin */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div> 
+
+            
+
+             
+            </div>
+
+
+
+              
             </div>
 
             <div className="flex flex-col gap-9">
@@ -184,7 +298,6 @@ export default function Skills() {
                         initial={{ width: 0 }}
                         whileInView={{ width: `${bar.value}%` }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
-                        viewport={{ once: true }}
                         className={`h-[50%] rounded-full mt-[1.7px] ml-[4px]   ${
                           bar.color === "blue"
                             ? "bg-blue-400 shadow-[0_0_18px_rgba(34,211,238,0.8)]"
@@ -200,8 +313,56 @@ export default function Skills() {
 
           </div>
 
-          <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-10 flex items-center shadow-inner shadow-white/15 mx-3">
+          <div className="relative max-w-6xl rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-10 flex mx-auto shadow-inner shadow-white/15 mt-9">
+
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
             </div>
+
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div>
+
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div>
+
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div> 
+
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div> 
+
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
+             <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="VS Code"
+                className="w-8 h-8"
+              />
+            </div>   
+          </div>
 
         </div>
 
