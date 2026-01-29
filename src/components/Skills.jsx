@@ -15,102 +15,52 @@ import { title } from "framer-motion/client";
 
 export default function Skills() {
 
-    // const frontendSkills = [
-    //     {name: "HTML5", level: "95"},
-    //     {name: "CSS3", level: "95"},
-    //     {name: "JavaScript", level: "90"},
-    //     {name: "React", level: "90"},
-    //     {name: "Tailwind CSS", level: "95"},
-    //     {name: "TypeScript", level: "60"},
-    //     {name: "Next.js", level: "85"},
-    // ];
-
-    // const BackendSkills = [
-    //     {name: "Node.js", level: "86"},
-    //     {name: "Express.js", level: "80"},
-    //     {name: "MongoDB", level: "85"},
-    //     {name: "MySQL", level: "75"},
-    //     {name: "REST APIs", level: "70"},
-    //     {name: "PHP", level: "70"},
-    //     {name: "Laravel", level: "60"},
-    // ];
-
-    // const OtherSkills = [
-    //     {name: "Java", level: "70"},
-    //     {name: "Python", level: "75"},
-    //     {name: "C", level: "73"},
-    //     {name: "C++", level: "73"},
-    //     {name: "Kotlin", level: "80"},
-    // ]
-
-    // const professionalSkills = [
-    //     { name: "Communication", level: 95 },
-    //     { name: "Problem Solving", level: 90 },
-    //     { name: "Teamwork", level: 90 },
-    // ];
-
-    // const tools = [
-    //     { name: "VS Code", icon:vscode},
-    //     { name: "Android Studio", icon: androidSt },
-    //     { name: "GitHub", icon: github},
-    //     { name: "Postman", icon: postman },
-    //     { name: "Mongo DB", icon: mongo},
-    //     { name: "MySQL", icon: sql },
-    //     { name: "Figma", icon: figma }, 
-    // ];
-
-//     const certificates = [
-//     {
-//       title: "AWS Cloud Practitioner Essentials",
-//       issuer: "Amazon Web Services",
-//       year: "2024",
-//       label: "Cloud",
-//       img: certi,
-//     },
-//     {
-//       title: "Microsoft Azure Fundamentals (AZ-900)",
-//       issuer: "Microsoft Azure",
-//       year: "2024",
-//       label: "Cloud",
-//       img: certi,
-//     },
-//     {
-//       title: "MERN Stack Fundamentals",
-//       issuer: "Great Learning Academy",
-//       year: "2023",
-//       label: "Full Stack",
-//       img: certi,
-//     },
-//   ];
-
-  const skillContainer = [
-    {name: "HTML5", title: "frontend"},
-    {name: "React", title: "frontend"},
-    {name: "CSS3", title: "frontend"},
-    {name: "Tailwind CSS", title: "frontend"},
-    {name: "Next.js", title: "frontend"},
-    {name: "Node.js", title: "backend"},  
-    {name: "Python", title: "programming"},
-    {name: "MongoDB", title: "data"},
-    {name: "REST API", title: "backend"},
-    {name: "C++", title: "programming"},
-    {name: "JavaScript", title: "frontend"},
-    {name: "Express.js", title: "backend"},
-    {name: "PHP", title: "backend"},
-    {name: "Laravel", title: "backend"},    
-    {name: "Java", title: "backend"},    
-    {name: "MySQL", title: "data"},
-    {name: "C", title: "programming"},
-    {name: "TypeScript", title: "frontend"},
-    {name: "Kotlin", title: "programming"},
+  const languages = [
+    {name: "HTML5", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"},
+    {name: "CSS3", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"},
+    {name: "JavaScript", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"},
+    {name: "TypeScript", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"},
+    {name: "Python", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"},  
+    {name: "PHP", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"},
+    {name: "C", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"},
+    {name: "C++", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"},
+    {name: "Java", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"},
+    {name: "Kotlin", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"},
   ]
 
-  const skillStyle = {
-    frontend: "border-blue-400 shadow-[0_0_8px_rgba(24,121,153,0.8)] text-blue-400",
-    backend: "border-violet-400/40 shadow-[0_0_8px_rgba(167,139,250,0.6)] text-violet-400",
-    data: "border-fuchsia-600/40 shadow-[0_0_8px_rgba(182,82,199,0.6)] text-fuchsia-600",
-    programming: "border-indigo-200 shadow-[0_0_8px_rgba(255,255,255,0.4)] text-indigo-200",
-  }
+  const frameworks = [
+    {name: "React", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"},
+    {name: "Tailwind CSS", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"},
+    {name: "Express.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"},
+    {name: "Laravel", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"},
+    {name: "Spring Boot", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"},
+    {name: "Next.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"}
+  ]
+
+  const databases = [
+    {name: "SQL", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"},
+    {name: "MongoDB", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"},
+    {name: "Oracle", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"},
+    {name: "Firebase", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"},
+  ]
+
+  const tools = [
+    {name: "GitHub", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"},
+    {name: "VSCode", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"},
+    {name: "Visual Studio", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-original.svg"},
+    {name: "IntelliJ Idea", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"},
+    {name: "Figma", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"},
+    {name: "Canva", src: "https://unpkg.com/simple-icons@v9/icons/canva.svg"},
+    {name: "Android Studio", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"},
+    {name: "Postman", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"},
+  ]
+
+  // const skillStyle = {
+  //   frontend: "border-blue-400 shadow-[0_0_8px_rgba(24,121,153,0.8)] text-blue-400",
+  //   backend: "border-violet-400/40 shadow-[0_0_8px_rgba(167,139,250,0.6)] text-violet-400",
+  //   data: "border-fuchsia-600/40 shadow-[0_0_8px_rgba(182,82,199,0.6)] text-fuchsia-600",
+  //   programming: "border-indigo-200 shadow-[0_0_8px_rgba(255,255,255,0.4)] text-indigo-200",
+  // }
 
   const skillBars = [
     {title: "Frontend Engineering", label: "SCALABLE & RESPONSIVE UI", value: 85, color:"blue"},
@@ -144,7 +94,7 @@ export default function Skills() {
         <div className="relative min-h-screen">
           
            {/* Grid Background */}
-          <div className="absolute mt-10 h-screen inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:60px_60px]" />
+          <div className="absolute mt-10 min-h-screen inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
           
           <div className="pt-25 grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl gap-10">
@@ -152,124 +102,116 @@ export default function Skills() {
             {/* Left Section */}
             <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-8 shadow-inner shadow-white/15 mx-3">
 
-            {/* Languages */}
-            <div className="flex items-center gap-3">
-              <span className="w-8 h-[5px] bg-indigo-600 rounded-3xl" />              
-              <p className="text-2xl font-NavtextR font-semibold bg-gradient-to-r from-indigo-600 via-fuchsia-400 to-purple-300 bg-clip-text text-transparent">
-                LANGUAGES
+            {/* ------------ Languages --------------- */}
+            <div className="flex items-center justify-center gap-2">
+              <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />              
+              <p className="text-lg font-bold text-white/80 tracking-wide">
+                Languages
               </p>
+              <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />
             </div>
 
-            {/* Line 1 */}
-            <div className="relative flex items-center mt-3">
-
-            {/* html */}
-            <div className="relative flex rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
+            <div className="flex flex-wrap justify-center gap-2 mt-5 max-w-2xl mx-auto">
+              {languages.map((lang) => (
+                <div
+                  key={lang.name}
+                  className="w-16 h-20 md:w-17 md:h-21 flex flex-col items-center justify-center rounded-2xl md:rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl shadow-inner shadow-white/15 flex-shrink-0"
+                >
+                  <img
+                    src={lang.src}
+                    alt={lang.name}
+                    className="w-6 h-6 md:w-8 md:h-8 object-contain"
+                  />
+                  <p className="text-[10px] md:text-xs mt-2 text-white/50 text-center">
+                    {lang.name}
+                  </p>
+                </div>
+              ))}
             </div>
-
-            {/* CSS */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div>
-
-            {/* Tailwind */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div>
-
-            {/* Javascript */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div> 
-
-            {/* Python */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div> 
-
-            {/* PHP */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div>           
-            </div>
-
-            {/* Line 2 */}
-            <div className="relative flex items-center mt-3">
-
-            {/* C */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div>
-
-            {/* C++ */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div>
-
-            {/* Java */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div>
-
-            {/* Typescript */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div> 
-
-            {/* Kotlin */}
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-4 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div> 
-
             
-
-             
+            {/* --------- Frameworks ---------- */}
+            <div className="flex items-center justify-center gap-2 mt-5">
+              <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />              
+              <p className="text-lg font-bold text-white/80 tracking-wide">
+                Frameworks & Libraries
+              </p>
+              <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />
             </div>
+
+            <div className="flex flex-wrap justify-center gap-2 mt-5 max-w-2xl mx-auto">
+              {frameworks.map((frame) => (
+                <div
+                  key={frame.name}
+                  className="w-16 h-20 md:w-17 md:h-21 flex flex-col items-center justify-center rounded-2xl md:rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl shadow-inner shadow-white/15 flex-shrink-0"
+                >
+                  <img
+                    src={frame.src}
+                    alt={frame.name}
+                    className="w-6 h-6 md:w-8 md:h-8 object-contain"
+                  />
+                  <p className="text-[10px] md:text-xs mt-2 text-white/50 text-center">
+                    {frame.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* ---------- Databases ---------- */}
+            <div className="flex items-center justify-center gap-2 mt-5">
+              <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />              
+              <p className="text-lg font-bold text-white/80 tracking-wide">
+                Databases
+              </p>
+              <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-2 mt-5 max-w-2xl mx-auto">
+              {databases.map((db) => (
+                <div
+                  key={db.name}
+                  className="w-16 h-20 md:w-17 md:h-21 flex flex-col items-center justify-center rounded-2xl md:rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl shadow-inner shadow-white/15 flex-shrink-0"
+                >
+                  <img
+                    src={db.src}
+                    alt={db.name}
+                    className="w-6 h-6 md:w-8 md:h-8 object-contain"
+                  />
+                  <p className="text-[10px] md:text-xs mt-2 text-white/50 text-center">
+                    {db.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* ----------- Tools ------------ */}
+            <div className="flex items-center justify-center gap-2 mt-5">
+              <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />              
+              <p className="text-lg font-bold text-white/80 tracking-wide">
+                Tools
+              </p>
+              <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-2 mt-5 max-w-2xl mx-auto">
+              {tools.map((t) => (
+                <div
+                  key={t.name}
+                  className="w-16 h-20 md:w-17 md:h-21 flex flex-col items-center justify-center rounded-2xl md:rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl shadow-inner shadow-white/15 flex-shrink-0"
+                >
+                  <img
+                    src={t.src}
+                    alt={t.name}
+                    className="w-6 h-6 md:w-8 md:h-8 object-contain"
+                  />
+                  <p className="text-[10px] md:text-xs mt-2 text-white/50 text-center">
+                    {t.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+
+
 
 
 
@@ -312,7 +254,7 @@ export default function Skills() {
             </div>         
 
           </div>
-
+{/* 
           <div className="relative max-w-6xl rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-10 flex mx-auto shadow-inner shadow-white/15 mt-9">
 
             <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
@@ -362,7 +304,7 @@ export default function Skills() {
                 className="w-8 h-8"
               />
             </div>   
-          </div>
+          </div> */}
 
         </div>
 
