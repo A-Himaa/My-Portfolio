@@ -50,17 +50,9 @@ export default function Skills() {
     {name: "Visual Studio", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-original.svg"},
     {name: "IntelliJ Idea", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"},
     {name: "Figma", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"},
-    {name: "Canva", src: "https://unpkg.com/simple-icons@v9/icons/canva.svg"},
     {name: "Android Studio", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"},
     {name: "Postman", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"},
   ]
-
-  // const skillStyle = {
-  //   frontend: "border-blue-400 shadow-[0_0_8px_rgba(24,121,153,0.8)] text-blue-400",
-  //   backend: "border-violet-400/40 shadow-[0_0_8px_rgba(167,139,250,0.6)] text-violet-400",
-  //   data: "border-fuchsia-600/40 shadow-[0_0_8px_rgba(182,82,199,0.6)] text-fuchsia-600",
-  //   programming: "border-indigo-200 shadow-[0_0_8px_rgba(255,255,255,0.4)] text-indigo-200",
-  // }
 
   const skillBars = [
     {title: "Frontend Engineering", label: "SCALABLE & RESPONSIVE UI", value: 85, color:"blue"},
@@ -79,7 +71,7 @@ export default function Skills() {
 
 
   return (
-    <section className="bg-gradient-to-b from-[#061936] via-[#11104A] to-[#041024] min-h-screen text-center">
+    <section className="bg-gradient-to-b from-[#061936] via-[#11104A] to-[#041024] min-h-screen text-center pb-20">
 
         <div className="relative space-y-6">
             <div className="inline-flex p-[1.5px] rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 opacity-90 to-fuchsia-500 shadow-[0_0_25px_rgba(139,92,246,0.45)]">
@@ -97,7 +89,7 @@ export default function Skills() {
           <div className="absolute mt-10 min-h-screen inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
           
-          <div className="pt-25 grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl gap-10">
+          <div className="pt-10 md:pt-25 grid grid-cols-1 md:grid-cols-2 mx-auto max-w-6xl gap-5 md:gap-10">
 
             {/* Left Section */}
             <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-8 shadow-inner shadow-white/15 mx-3">
@@ -182,130 +174,75 @@ export default function Skills() {
                 </div>
               ))}
             </div>
-
-            {/* ----------- Tools ------------ */}
-            <div className="flex items-center justify-center gap-2 mt-5">
-              <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />              
-              <p className="text-lg font-bold text-white/80 tracking-wide">
-                Tools
-              </p>
-              <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />
             </div>
 
-            <div className="flex flex-wrap justify-center gap-2 mt-5 max-w-2xl mx-auto">
-              {tools.map((t) => (
-                <div
-                  key={t.name}
-                  className="w-16 h-20 md:w-17 md:h-21 flex flex-col items-center justify-center rounded-2xl md:rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl shadow-inner shadow-white/15 flex-shrink-0"
-                >
-                  <img
-                    src={t.src}
-                    alt={t.name}
-                    className="w-6 h-6 md:w-8 md:h-8 object-contain"
-                  />
-                  <p className="text-[10px] md:text-xs mt-2 text-white/50 text-center">
-                    {t.name}
+            {/* Right Section */}
+            <div className="flex flex-col gap-9 p-8 md:p-0">
+              {skillBars.map((bar, i) => (
+                <div key={i}>
+
+                  <p className="text-sm text-left text-white/50 mb-1 tracking-widest font-NavtextR">
+                    {bar.label}
                   </p>
+
+                  <div className="flex justify-between items-end mb-2">
+                    <h3 className="text-lg font-semibold text-white/80">
+                      {bar.title}
+                    </h3>
+                    <span className={`text-xl font-semibold font-NavtextR tracking-wider ${barColors(bar.color)}`}>
+                      {bar.value}%
+                    </span>
+                  </div>
+
+                  <div className="h-3 rounded-full bg-white/10 overflow-hidden border border-white/20">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${bar.value}%` }}
+                      transition={{ duration: 1.2, ease: "easeOut" }}
+                      className={`h-[50%] rounded-full mt-[1.7px] ml-[4px]   ${
+                      bar.color === "blue"
+                        ? "bg-blue-400 shadow-[0_0_18px_rgba(34,211,238,0.8)]"
+                        : bar.color === "violet"? "bg-violet-400 shadow-[0_0_18px_rgba(167,139,250,0.8)]"
+                        : bar.color === "fuchsia" ? "bg-fuchsia-400 shadow-[0_0_18px_rgba(167,139,250,0.8)]"
+                        : "bg-indigo-200 shadow-[0_0_18px_rgba(167,139,250,0.8)]"
+                      }`}
+                    />
+                  </div>
                 </div>
+                ))}
+            
+            {/* --------- Tools ---------- */}
+            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-8 shadow-inner shadow-white/15 mt-2">
+              <div className="flex items-center justify-center gap-2 mt-">
+                <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />              
+                <p className="text-lg font-bold text-white/80 tracking-wide">
+                Tools
+                </p>
+                <span className="w-15 h-[2px] bg-white/50 rounded-3xl" />
+              </div>
+
+            <div className="flex flex-wrap md:flex-nowrap  justify-center gap-2 mt-5 max-w-2xl mx-auto">
+              {tools.map((t) => (
+              <div
+                key={t.name}
+                className="w-16 h-20 md:w-17 md:h-21 flex flex-col items-center justify-center rounded-2xl md:rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl shadow-inner shadow-white/15 flex-shrink-0"
+              >
+                <img
+                  src={t.src}
+                  alt={t.name}
+                  className="w-6 h-6 md:w-8 md:h-8 object-contain"
+                />
+                <p className="text-[10px] md:text-xs mt-2 text-white/50 text-center">
+                  {t.name}
+                </p>
+              </div>
               ))}
             </div>
-
-
-
-
-
-
-              
             </div>
 
-            <div className="flex flex-col gap-9">
-                {skillBars.map((bar, i) => (
-                  <div key={i}>
-
-                    <p className="text-sm text-left text-white/50 mb-1 tracking-widest font-NavtextR">
-                      {bar.label}
-                    </p>
-
-                    <div className="flex justify-between items-end mb-2">
-                      <h3 className="text-lg font-semibold text-white/80">
-                        {bar.title}
-                      </h3>
-                      <span className={`text-xl font-semibold font-NavtextR tracking-wider ${barColors(bar.color)}`}>
-                        {bar.value}%
-                      </span>
-                    </div>
-
-                    <div className="h-3 rounded-full bg-white/10 overflow-hidden border border-white/20">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${bar.value}%` }}
-                        transition={{ duration: 1.2, ease: "easeOut" }}
-                        className={`h-[50%] rounded-full mt-[1.7px] ml-[4px]   ${
-                          bar.color === "blue"
-                            ? "bg-blue-400 shadow-[0_0_18px_rgba(34,211,238,0.8)]"
-                            : bar.color === "violet"? "bg-violet-400 shadow-[0_0_18px_rgba(167,139,250,0.8)]"
-                            : bar.color === "fuchsia" ? "bg-fuchsia-400 shadow-[0_0_18px_rgba(167,139,250,0.8)]"
-                            : "bg-indigo-200 shadow-[0_0_18px_rgba(167,139,250,0.8)]"
-                        }`}
-                      />
-                    </div>
-                  </div>
-                ))}
             </div>         
 
           </div>
-{/* 
-          <div className="relative max-w-6xl rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-10 flex mx-auto shadow-inner shadow-white/15 mt-9">
-
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div>
-
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div>
-
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div>
-
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div> 
-
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div> 
-
-            <div className="relative rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl p-5 shadow-inner shadow-white/15 mr-3">
-             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                alt="VS Code"
-                className="w-8 h-8"
-              />
-            </div>   
-          </div> */}
-
         </div>
 
 
