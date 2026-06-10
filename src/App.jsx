@@ -36,13 +36,9 @@ function App() {
     <Projects />
   </section>
 
-
-
-  {/* 
-
   <section id="contact">
     <Contacts />
-  </section> */}
+  </section>
 
 </div>
 

@@ -1,89 +1,192 @@
-import cr from "../assets/CR.png";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import atmosphera from "../assets/projects/atmosphera.png";
+import portfolio from "../assets/projects/portfolio.png";
+import crimeRadar from "../assets/projects/crimeRadar.png";
+import rangiriWeb from "../assets/projects/rangiriWeb.png";
+import rangiriAqua from "../assets/projects/rangiriAqua.png";
 
 export default function Projects() {
-        const projects = [
-        {
-          title: "Crime Radar - Crime Management System",
-          img: cr,
-          desc: "A real-time crime reporting and awareness system.",
-          tech: "Mongo DB, Express.js, React, Node.js, Tailwind CSS",
-        },
-        {
-          title: "Ryome Autocare - Vehicl Management System",
-          img: cr,
-          desc: "Amazon Web Services",
-          tech: "Mongo DB, Express.js, React, Node.js, Tailwind CSS",
-        },
-        {
-          title: "AWS Cloud Practitioner Essentials",
-          img: cr,
-          desc: "Amazon Web Services",
-          tech: "Mongo DB, Express.js, React, Node.js, Tailwind CSS",
-        },
-      ];
+  const [activeProject, setActiveProject] = useState(1);
 
+  const projects = [
+    //------- Portfolio---------
+    {
+      title: "Personal Portfolio",
+      subtitle: "Modern Developer Personal Portfolio Website",
+      img: portfolio,
+      desc: "A responsive personal portfolio website built to showcase the projects, skills, experience, and achievements.",
+      tech: "React.js, Vite, Tailwind CSS, CSS3",
+    },
+    //-------- ATMOSPHERA ---------
+    {
+      title: "ATMOSPHERA",
+      subtitle: "AI-Based Analysis for Biosignatures & Profiling using Spectral Data",
+      img: atmosphera,
+      desc: "An AI-powered atmospheric analysis system for processesing exoplanet spectral data to detect atmospheric gases, evaluate potential biosignatures, and generate planetary habitability profiles for astronomical research.",
+      tech: "Python, PyTorch, Scikit-learn, Pandas, NumPy, SciPy, FastAPI",
+    },
+    // ------- Crime Radar----
+    {
+      title: "Crime Radar",
+      subtitle: "Real-time Crime Reporting & Awareness Platform",
+      img: crimeRadar,
+      desc: "A community-driven crime awareness system featuring live crime mapping, real-time reporting, analytical dashboards, and secure anonymous reporting.",
+      tech: "MongoDB, Express.js, React.js, Node.js, Tailwind CSS, Nodemailer",
+    },
+    // ------- Rangiri Website----
+    {
+      title: "Rangiri Holdings Website",
+      subtitle: "Corporate Website for Rangiri Holdings",
+      img: rangiriWeb,
+      desc: "A responsive corporate website designed to strengthen Rangiri Holdings' digital presence by showcasing its services, CSR activities, project portfolio, and business achievements while enabling seamless customer engagement through contact forms.",
+      tech: "Next.js 15, React, Tailwind CSS, Framer Motion",
+    },
+    // ------- Rangiri Aqua----
+    {
+      title: "Rangiri Aqua Website",
+      subtitle: "Adventure, Training & Event Management Platform",
+      img: rangiriAqua,
+      desc: "A modern corporate website developed to showcase Rangiri Aqua's adventure activities, team-building programs, corporate training services, and event management solutions while providing an engaging and responsive user experience.",
+      tech: "HTML5, CSS3, JavaScript",
+    },
+  ];
 
-    return (
-        <section className="bg-bgColor">
-                <h3 className="font-mono text-base text-textAccent text-center mb-0">
-                    PROJECTS
-                </h3>
-                <h2 className="font-bold text-3xl md:text-5xl text-textColor pb-2 leading-tight text-center">
-                    Projects
-                </h2>
+  const fadeInOut = (
+    delay = 0,
+    duration = 0.8
+  ) => ({
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay,
+        duration,
+        ease: "easeOut"
+      }
+    }
+  });
 
-                {/* <p className="text-base text-textColor tracking-wide text-center mx-auto max-w-3xl">
-                    A collection of verified certifications demonstrating my expertise in full-stack development, 
-                    cloud technologies, and core software engineering concepts.
-                </p> */}
-                
-                {/* Projects Section */}
-                <div className="py-6 max-w-6xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-10">
-                        {projects.map((proj, index) => (
-                            <div
-                                key={index}
-                                className="relative bg-[#0F193D] rounded-xl border border-white/10 shadow-lg hover:shadow-accent/20 transition "
-                            >
-                            <img
-                            src={proj.img}
-                            alt={proj.title}
-                            className="w-full h-50 object-cover rounded-t-xl opacity-80"
-                            />
+  return (
+    <section className="bg-gradient-to-b from-[#041024] via-[#11104A] to-[#061936] min-h-screen text-center pt-10">
+      <div className="relative space-y-6">
 
-                            <div className="p-4">
-                                <h4 className="text-lg font-semibold text-textColor mb-1">
-                                    {proj.title}
-                                </h4>
+        <div className="inline-flex p-[1.5px] rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 opacity-90 to-fuchsia-500 shadow-[0_0_25px_rgba(139,92,246,0.45)]">
+          <button className="px-5 rounded-full py-1 bg-[#060321] text-white/90 font-NavtextR backdrop-blur-md">
+            Projects
+          </button>
+        </div>
 
-                                <p className="text-sm text-mutedText">{proj.desc}</p>
+        <motion.h2 
+          className="text-textColor font-Herohead font-semibold text-2xl md:text-4xl"
+          variants={fadeInOut(0.3)}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <span className="bg-gradient-to-r text-4xl md:text-5xl from-indigo-600 via-purple-600 to-fuchsia-500 bg-clip-text text-transparent">
+            F
+          </span>
+          EATURED WORK
+        </motion.h2>
+      </div>
 
-                                <div className="flex flex-wrap gap-1 mt-2">
-                                    {proj.tech.split(", ").map((techItem, i) => (
-                                        <span
-                                        key={i}
-                                        className="text-textAccent border border-textAccent/50 rounded-3xl text-xs px-2 py-1 inline-block"
-                                        >
-                                        {techItem}
-                                        </span>
-                                    ))}
-                                </div>                                
-                            </div>
-                        </div>
-                        ))}
-                        
+      {/* Project Carousel */}
+      <motion.div 
+        className="py-12 max-w-7xl mx-auto"
+        variants={fadeInOut(0.3)}
+        initial="hidden"
+        whileInView="visible"
+        >
+        <div className="flex items-center justify-center gap-2 md:gap-3 overflow-x-auto py-5">
 
+          {projects.map((proj, index) => {
+            const isActive = index === activeProject;
+            
+            return (
+              <div
+                key={index}
+                onClick={() => setActiveProject(index)}
+               
+                className={`
+                  relative bg-white/5 border border-white/10 rounded-2xl p-3 pt-4 backdrop-blur-xl shadow-inner shadow-white/15 transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_10px_rgba(99,102,241,0.25)] cursor-pointer
+                  ${isActive 
+                    ? 'w-[400px] md:w-[600px] h-[500px] md:h-[600px] border-white/20 shadow-[0_0_40px_rgba(99,102,241,0.25)] ' 
+                    : 'w-[80px] md:w-[110px] h-[500px] md:h-[600px] border-white/5 bg-[#0a1025] opacity-60 hover:opacity-80'
+                  }
+                `}
+              >
+                {isActive ? (
+                  <div className="h-full flex flex-col">
+                    <div className="h-[45%] relative overflow-hidden rounded-t-2xl">
+                      <img
+                        src={proj.img}
+                        alt={proj.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 " />
                     </div>
-                    <div className="flex justify-center mx-auto">
-                        <a href="#">
-                        <button className="border-2 border-accent/80 text-base font-semibold text-textColor tracking-wide px-3 py-3 rounded-md hover:bg-accent/50">
-                            View All Projects
-                        </button>
-                        </a>
-                </div>
-            </div>
+                    
+                    <div className="flex-1 p-6 flex flex-col">
+                      <h3 className="text-xl md:text-2xl font-bold text-textColor mb-1 font-Herohead">
+                        {proj.title}
+                      </h3>
 
+                      <h3 className = "text-md font-semibold text-white/80 mb-8">{proj.subtitle}</h3>
+                      
+                      <p className="text-sm text-mutedText mb-2 flex-1">
+                        {proj.desc}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-4 mx-auto">
+                        {proj.tech.split(", ").map((techItem, i) => (
+                          <span
+                            key={i}
+                            className="text-xs text-white/60 backdrop-blur-xlborder border-white/50 shadow-inner shadow-white/30 rounded-full px-3 py-1 mb-2 "
+                          >
+                            {techItem}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <button className="relative text-white px-3 md:px-5 py-3 rounded-2xl bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 overflow-hidden cursor-pointer hover:bg-gradient-to-r hover:from-violet-950 hover:via-purple-900 hover:to-blue-950 hover:border-white/50 hover:scale-105 transition-all duration-300">
+                        VIEW CASE STUDY
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  // Collapsed Card - Minimal Info
+                  <div className="h-full flex items-center justify-center p-2">
+                    <div className="text-center">
+                      <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-2 rounded-lg overflow-hidden">
+                        <img
+                          src={proj.img}
+                          alt={proj.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <p className="text-[10px] md:text-xs text-textColor font-medium leading-tight">
+                        {proj.title.split(' ').slice(0, 2).join(' ')}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </motion.div>
 
-        </section>
-    )
+      {/* <div className="flex justify-center mx-auto pb-12">
+        <a href="#">
+          <button className="border-2 border-accent/80 text-base font-semibold text-textColor tracking-wide px-6 py-3 rounded-md hover:bg-accent/50 transition-all">
+            View All Projects
+          </button>
+        </a>
+      </div> */}
+    </section>
+  );
 }
