@@ -145,7 +145,7 @@ export default function About(){
           <span className="bg-gradient-to-r text-4xl md:text-5xl from-indigo-600 via-purple-600 to-fuchsia-500 bg-clip-text text-transparent">M</span>Y JOURNEY
         </h2>
 
-        <p className="text-white/30 pt-2 text-center tracking-wider text-sm">A JOURNEY OF LEARNING, GROWTH AND ACHIEVEMENT.</p>
+        <p className="text-white/50 pt-4 text-center tracking-wider text-sm">A JOURNEY OF LEARNING, GROWTH AND ACHIEVEMENT.</p>
 
         <div className="relative py-10 md:py-20 space-y-3 md:space-y-5">
 

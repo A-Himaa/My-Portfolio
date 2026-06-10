@@ -68,7 +68,24 @@ export default function Skills() {
     fuchsia: "text-fuchsia-600",
   }[color] || "text-indigo-200");
 
-
+  const fadeInOut = (
+      delay = 0,
+      duration = 0.8
+    ) => ({
+      hidden: {
+        opacity: 0,
+        y: 20,
+      },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          delay,
+          duration,
+          ease: "easeOut"
+        }
+      }
+    });
 
   return (
     <section className="bg-gradient-to-b from-[#061936] via-[#11104A] to-[#041024] min-h-screen text-center pb-25">
@@ -78,9 +95,14 @@ export default function Skills() {
                 <button className="px-5 rounded-full py-1 bg-[#060321] text-white/90 font-NavtextR backdrop-blur-md">Skills</button>
             </div>
 
-            <h2 className="text-textColor font-Herohead font-semibold text-2xl md:text-4xl">
+            <motion.h2 
+              className="text-textColor font-Herohead font-semibold text-2xl md:text-4xl"
+              variants={fadeInOut(0.3)}
+              initial="hidden"
+              whileInView="visible"
+            >
                 <span className="bg-gradient-to-r text-4xl md:text-5xl from-indigo-600 via-purple-600 to-fuchsia-500 bg-clip-text text-transparent">S</span>KILL MATRIX
-            </h2>
+            </motion.h2>
         </div>
 
         <div className="relative min-h-screen">
