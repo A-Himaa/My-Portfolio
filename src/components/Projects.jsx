@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import atmosphera from "../assets/projects/atmosphera.png";
 import portfolio from "../assets/projects/portfolio.png";
 import crimeRadar from "../assets/projects/crimeRadar.png";
@@ -8,6 +9,7 @@ import rangiriAqua from "../assets/projects/rangiriAqua.png";
 
 export default function Projects() {
   const [activeProject, setActiveProject] = useState(1);
+  const navigate = useNavigate();
 
   const projects = [
     //------- Portfolio---------
@@ -152,7 +154,9 @@ export default function Projects() {
                         ))}
                       </div>
                       
-                      <button className="relative text-white px-3 md:px-5 py-3 rounded-2xl bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 overflow-hidden cursor-pointer hover:bg-gradient-to-r hover:from-violet-950 hover:via-purple-900 hover:to-blue-950 hover:border-white/50 hover:scale-105 transition-all duration-300">
+                      <button 
+                        onClick={() => navigate(`/case-study/${activeProject}`)}
+                        className="relative text-white px-3 md:px-5 py-3 rounded-2xl bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 overflow-hidden cursor-pointer hover:bg-gradient-to-r hover:from-violet-950 hover:via-purple-900 hover:to-blue-950 hover:border-white/50 hover:scale-105 transition-all duration-300">
                         VIEW CASE STUDY
                       </button>
                     </div>
