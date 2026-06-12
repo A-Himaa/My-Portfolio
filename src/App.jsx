@@ -57,7 +57,7 @@ function App() {
           }
         />
         <Route
-          path="/case-study/:id"
+          path="/:id"
           element={
             <>
               <Navbar />

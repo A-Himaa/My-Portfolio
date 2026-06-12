@@ -52,11 +52,11 @@ export default function CaseStudy() {
 
 
   return (
-    <div className="bg-[#041024] min-h-screen text-white">
+    <div className="bg-[#041024] min-h-screen text-white overflow-hidden">
 
       {/* Overview section */}
       <motion.section
-        className="relative pt-38 pb-20 px-6 md:px-12 max-w-7xl mx-auto"
+        className="relative pt-38 md:pb-20 px-6 md:px-12 max-w-7xl mx-auto"
         variants={fadeInUp()}
         initial="hidden"
         animate="visible"
@@ -76,13 +76,13 @@ export default function CaseStudy() {
             </motion.div>
 
 
-            <h1 className="text-5xl md:text-6xl font-bold font-Herohead mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold font-Herohead mb-4">
               <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
                 {project.title}
               </span>
             </h1>
 
-            <p className="text-lg text-white/50 mb-15">{project.subtitle}</p>
+            <p className="text-sm md:text-lg text-white/50 mb-8 md:mb-15">{project.subtitle}</p>
 
             {/* Buttons */}
             <motion.div
@@ -119,7 +119,7 @@ export default function CaseStudy() {
                 <div className="text-indigo-400">👤</div>
                 <div>
                   <p className="text-sm text-white/60">Role</p>
-                  <p className="text-lg font-medium text-white/80">{project.role}</p>
+                  <p className="md:text-lg font-medium text-white/80">{project.role}</p>
                 </div>
               </div>
             </motion.div>
@@ -147,20 +147,20 @@ export default function CaseStudy() {
 
       {/* Overview Section */}
       <motion.section
-        className="py-20 px-6 md:px-12 max-w-7xl mx-auto"
+        className="py-15 md:py-20 px-6 md:px-12 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-10 font-Herohead">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 font-Herohead">
           <span className="bg-gradient-to-r text-4xl md:text-5xl from-indigo-600 via-purple-600 to-fuchsia-500 bg-clip-text text-transparent">
             P
           </span>
           roject Overview
         </h2>
 
-        <p className="text-lg text-white/70 leading-relaxed mb-15 max-w-3xl text-justify">
+        <p className="text-sm md:text-lg text-white/70 leading-relaxed mb-15 max-w-3xl text-justify">
           {project.overview}
         </p>
 
@@ -184,7 +184,7 @@ export default function CaseStudy() {
 
       {/* Screenshots Section */}
       <motion.section
-        className="py-20 px-6 md:px-12 max-w-7xl mx-auto"
+        className="py-10 md:py-20 px-6 md:px-12 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -237,7 +237,7 @@ export default function CaseStudy() {
           <div className="flex items-center justify-between">
             <div className="flex-1">
               <p className="text-white/60 text-lg mb-2">Next Project</p>
-              <h3 className="text-4xl font-bold font-Herohead mb-4">
+              <h3 className="text-3xl md:text-4xl font-bold font-Herohead mb-4">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                   {nextProject.title}
                 </span>
@@ -245,7 +245,7 @@ export default function CaseStudy() {
               <p className="text-white/70 text-lg mb-6">{nextProject.subtitle}</p>
 
               <motion.button
-                onClick={() => navigate(`/case-study/${nextProject.id}`)}
+                onClick={() => navigate(`/${nextProject.id}`)}
                 className="flex items-center gap-2 relative text-white px-3 md:px-8 py-3 rounded-lg bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 overflow-hidden cursor-pointer hover:bg-gradient-to-r hover:from-violet-950 hover:via-purple-900 hover:to-blue-950 hover:border-white/50 hover:scale-105 transition-all duration-300"
                 whileHover={{ gap: 12 }}
               >

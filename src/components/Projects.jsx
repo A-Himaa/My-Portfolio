@@ -155,7 +155,7 @@ export default function Projects() {
                       </div>
                       
                       <button 
-                        onClick={() => navigate(`/case-study/${activeProject}`)}
+                        onClick={() => navigate(`/${activeProject}`)}
                         className="relative text-white px-3 md:px-5 py-3 rounded-2xl bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 overflow-hidden cursor-pointer hover:bg-gradient-to-r hover:from-violet-950 hover:via-purple-900 hover:to-blue-950 hover:border-white/50 hover:scale-105 transition-all duration-300">
                         VIEW CASE STUDY
                       </button>

@@ -1,8 +1,32 @@
-import atmosphera from "../assets/projects/atmosphera.png";
 import portfolio from "../assets/projects/portfolio.png";
+import portfolio1 from "../assets/projects/portfolio1.png";
+import portfolio2 from "../assets/projects/portfolio2.png";
+import portfolio3 from "../assets/projects/portfolio3.png";
+import portfolio4 from "../assets/projects/portfolio4.png";
+
+import atmosphera from "../assets/projects/atmosphera.png";
+import atmosphera1 from "../assets/projects/atmosphera1.png";
+import atmosphera2 from "../assets/projects/atmosphera2.png";
+import atmosphera3 from "../assets/projects/atmosphera3.png";
+import atmosphera4 from "../assets/projects/atmosphera4.png";
+
 import crimeRadar from "../assets/projects/crimeRadar.png";
+import crimeRadar1 from "../assets/projects/cr1.png";
+import crimeRadar2 from "../assets/projects/cr2.png";
+import crimeRadar3 from "../assets/projects/cr3.png";
+import crimeRadar4 from "../assets/projects/cr4.png";
+
 import rangiriWeb from "../assets/projects/rangiriWeb.png";
+import rangiriWeb1 from "../assets/projects/rh1.png";
+import rangiriWeb2 from "../assets/projects/rh2.png";
+import rangiriWeb3 from "../assets/projects/rh3.png";
+import rangiriWeb4 from "../assets/projects/rh4.png";
+
 import rangiriAqua from "../assets/projects/rangiriAqua.png";
+import rangiriAqua1 from "../assets/projects/ra1.png";
+import rangiriAqua2 from "../assets/projects/ra2.png";
+import rangiriAqua3 from "../assets/projects/ra3.png";
+import rangiriAqua4 from "../assets/projects/ra4.png";
 
 export const caseStudies = [
   {
@@ -16,7 +40,7 @@ export const caseStudies = [
     role: "UI/UX Design & Frontend Development",
     liveLink: "https://your-portfolio.com",
     githubLink: "https://github.com/A-Himaa/My-Portfolio.git",
-    screenshots: [portfolio, portfolio, portfolio, portfolio],
+    screenshots: [portfolio1, portfolio2, portfolio3, portfolio4],
     nextProjectId: 1,
   },
   {
@@ -30,7 +54,7 @@ export const caseStudies = [
     role: "AI/ML Engineer & Full-Stack Developer",
     liveLink: "#",
     githubLink: "https://github.com/yourusername/atmosphera",
-    screenshots: [atmosphera, atmosphera, atmosphera, atmosphera],
+    screenshots: [atmosphera1, atmosphera2, atmosphera3, atmosphera4],
     nextProjectId: 2,
   },
   {
@@ -44,7 +68,7 @@ export const caseStudies = [
     role: "Full Stack Developer",
     liveLink: "https://crime-radar.example.com",
     githubLink: "https://github.com/yourusername/crime-radar",
-    screenshots: [crimeRadar, crimeRadar, crimeRadar, crimeRadar],
+    screenshots: [crimeRadar1, crimeRadar2, crimeRadar3, crimeRadar4],
     nextProjectId: 3,
   },
   {
@@ -58,7 +82,7 @@ export const caseStudies = [
     role: "Frontend Developer & UI/UX Designer",
     liveLink: "https://rangirixyz.example.com",
     githubLink: "https://github.com/yourusername/rangiri-holdings",
-    screenshots: [rangiriWeb, rangiriWeb, rangiriWeb, rangiriWeb],
+    screenshots: [rangiriWeb1, rangiriWeb2, rangiriWeb3, rangiriWeb4],
     nextProjectId: 4,
   },
   {
@@ -72,7 +96,7 @@ export const caseStudies = [
     role: "Frontend Developer",
     liveLink: "https://rangirilaqua.example.com",
     githubLink: "https://github.com/yourusername/rangiri-aqua",
-    screenshots: [rangiriAqua, rangiriAqua, rangiriAqua, rangiriAqua],
+    screenshots: [rangiriAqua1, rangiriAqua2, rangiriAqua3, rangiriAqua4],
     nextProjectId: 0,
   },
 ];
