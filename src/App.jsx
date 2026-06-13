@@ -19,8 +19,8 @@ function ScrollToTop() {
       const t = setTimeout(() => {
         const el = document.getElementById(id);
         if (el) {
-          const y = el.getBoundingClientRect().top + window.pageYOffset - 90;
-          window.scrollTo({ top: y, left: 0, behavior: 'smooth' });
+          const y = el.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: y, left: 0, behavior: 'smooth' });z
         } else {
           window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
         }

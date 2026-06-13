@@ -97,7 +97,7 @@ export default function Contact() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-[#061936] via-[#11104A] to-[#041024] min-h-screen text-center pb-5 pt-30">
+    <section className="bg-gradient-to-b from-[#061936] via-[#11104A] to-[#041024] min-h-screen text-center pb-5 pt-10 md:pt-30">
             
       <div className="relative z-10 max-w-6xl mx-auto px-4 pb-10">
         
@@ -121,7 +121,7 @@ export default function Contact() {
           </motion.h2>
 
           <motion.p 
-            className="text-white/50 text-lg max-w-2xl mx-auto font-NavtextR pb-4"
+            className="text-white/50 text-lg max-w-2xl mx-auto font-NavtextR md:pb-4"
             variants={fadeInOut(0.2)}
             initial="hidden"
             whileInView="visible"
