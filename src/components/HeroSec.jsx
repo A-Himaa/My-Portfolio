@@ -160,7 +160,7 @@ export default function HeroSec() {
                     </a>
 
                     <a 
-                       href=""
+                       href="mailto:akilatissera400@gmail.com"
                        target="_blank"
                        className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/20 
                                   text-white hover:bg-white/30 hover:scale-110 transition-all duration-300">
@@ -200,7 +200,7 @@ export default function HeroSec() {
                 </p>
                 
                 <div className="flex mt-7 gap-4 items-center">
-                    <button className="relative text-white px-3 md:px-5 py-3 rounded-2xl font-NavtextR text-base md:text-xl tracking-wider
+                    <a href="#projects" className="relative text-white px-3 md:px-5 py-3 rounded-2xl font-NavtextR text-base md:text-xl tracking-wider
                                        bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900 overflow-hidden group cursor-pointer 
                                        hover:bg-gradient-to-r hover:from-violet-950 hover:via-purple-900 hover:to-blue-950 hover:border-white/50 
                                        hover:scale-105 transition-all duration-300">
@@ -208,16 +208,16 @@ export default function HeroSec() {
                         <span className="relative flex gap-4 items-center z-10">
                             View My Work<FaArrowCircleRight />
                         </span>
-                    </button>
+                    </a>
 
-                    <button className="relative text-white px-3 md:px-6 py-3 rounded-2xl font-NavtextR text-base md:text-xl tracking-wider
+                    <a href="#contact" className="relative text-white px-3 md:px-6 py-3 rounded-2xl font-NavtextR text-base md:text-xl tracking-wider
                                        border border-white/30 bg-white/5 backdrop-blur-md overflow-hidden group cursor-pointer 
                                       transition-all duration-300 hover:bg-white/10 hover:border-white/60 hover:scale-105">
                         <span className="absolute inset-0 bg-white opacity-30 rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] blur-sm transition-transform duration-800"></span>
                         <span className="relative flex gap-4 items-center z-10">
                             Contact Me
                         </span>
-                    </button>
+                    </a>
                 </div>
             </div>
         

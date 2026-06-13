@@ -24,8 +24,8 @@ export default function navbar() {
       glass.style.top = `${y}px`;
 
       const mouseHovered = e.target.closest("a");
-      document.querySelectorAll(".group\\/nav-area a").forEach(a => {
-        a.style.trasform = "scale(1)";
+      document.querySelectorAll(".group\/nav-area a").forEach(a => {
+        a.style.transform = "scale(1)";
       });
 
       if (mouseHovered) mouseHovered.style.transform = "scale(1.4)";
@@ -56,7 +56,7 @@ export default function navbar() {
 
       {/*-----Logo-----*/}
       <div className="flex items-center">
-        <a href="#">
+        <a href="/">
           <div className="h-10 w-10 bg-gradient-to-br from-blue-700 via-purple-500 to-indigo-900 text-white flex items-center justify-center rounded-lg font-bold text-lg shadow-lg hover:scale-120 transition-scale duration-500">
             HT
           </div>
@@ -69,10 +69,10 @@ export default function navbar() {
         <div id="glass" className="glass-cursor"></div>
 
         <ul className="hidden md:flex items-center gap-15 text-textColor font-NavtextR font-medium text-lg tracking-wider ">
-          <li className="navigation-link hover:scale-120 transition-scale duration-400"><a href="#about">About</a></li>
-          <li className="navigation-link hover:scale-120 transition-scale duration-400"><a href="#skills">Skills</a></li>
-          <li className="navigation-link hover:scale-120 transition-scale duration-400"><a href="#projects">Projects</a></li>
-          <li className="navigation-link hover:scale-120 transition-scale duration-400"><a href="#contact">Contact</a></li>
+          <li className="navigation-link hover:scale-120 transition-scale duration-400"><a href="/#about">About</a></li>
+          <li className="navigation-link hover:scale-120 transition-scale duration-400"><a href="/#skills">Skills</a></li>
+          <li className="navigation-link hover:scale-120 transition-scale duration-400"><a href="/#projects">Projects</a></li>
+          <li className="navigation-link hover:scale-120 transition-scale duration-400"><a href="/#contact">Contact</a></li>
         </ul>
       </div>
 
@@ -102,7 +102,7 @@ export default function navbar() {
       <div className="flex justify-between items-center relative right-0">
 
         <div className="flex items-center">
-            <a href="#">
+            <a href="/">
               <div className="h-10 w-10 bg-gradient-to-br from-blue-700 via-purple-500 to-indigo-900 text-white flex items-center justify-center rounded-lg font-bold text-lg shadow-lg hover:scale-120 transition-scale duration-500">
                 HT
               </div>
@@ -117,11 +117,11 @@ export default function navbar() {
         </div>
 
       <div className="flex flex-col gap-2 mt-4 mb-2">
-        <MobileItem icon={<HiOutlineSquares2X2 />} label="HOME" target="#" onClick={() => setOpenMenu(false)} />
-        <MobileItem icon={<BsPerson />} label="ABOUT" target="#about" onClick={() => setOpenMenu(false)} />
-        <MobileItem icon={<BsCodeSlash />} label="SKILLS" target="#skills" onClick={() => setOpenMenu(false)} />
-        <MobileItem icon={<MdOutlineWorkOutline />} label="PROJECTS" target="#projects" onClick={() => setOpenMenu(false)} />
-        <MobileItem icon={<BsChat />} label="CONTACT" target="#contact" onClick={() => setOpenMenu(false)} />
+        <MobileItem icon={<HiOutlineSquares2X2 />} label="HOME" target="/" onClick={() => setOpenMenu(false)} />
+        <MobileItem icon={<BsPerson />} label="ABOUT" target="/#about" onClick={() => setOpenMenu(false)} />
+        <MobileItem icon={<BsCodeSlash />} label="SKILLS" target="/#skills" onClick={() => setOpenMenu(false)} />
+        <MobileItem icon={<MdOutlineWorkOutline />} label="PROJECTS" target="/#projects" onClick={() => setOpenMenu(false)} />
+        <MobileItem icon={<BsChat />} label="CONTACT" target="/#contact" onClick={() => setOpenMenu(false)} />
       </div>
 
       {/* Bottom Section*/}

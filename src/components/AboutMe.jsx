@@ -6,10 +6,10 @@ export default function About(){
   const timeLine = [
     {
       title : "Software Engineer Intern",
-      period: "2025 - Present",
+      period: "2025 - 2026",
       location: "Rangiri Holdings",
-      desc: "Working on real-world web applications, contributing to production-level systems and feature improvements.",
-      status: "ON_GOING",
+      desc: "Worked on real-world web applications, contributing to production-level systems and feature improvements.",
+      status: "COMPLETED",
       type: " "
     },
     {
@@ -120,7 +120,7 @@ export default function About(){
             whileInView="visible"
           >
           <div className="flex gap-2 pt-4">
-            <p className="text-white font-NavtextR px-5 py-1 bg-white/20 rounded-md text-sm md:text-base"><span className="text-fuchsia-300 font-semibold">3+</span> Years Learning</p>
+            <p className="text-white font-NavtextR px-5 py-1 bg-white/20 rounded-md text-sm md:text-base"><span className="text-fuchsia-300 font-semibold">4+</span> Years Learning</p>
             <p className="text-white font-NavtextR px-5 py-1 bg-white/20 rounded-md text-sm md:text-base"><span className="text-fuchsia-300 font-semibold">10+</span> Hands-On-Projects</p>
             <p className="text-white font-NavtextR px-5 py-1 bg-white/20 rounded-md text-sm md:text-base">Full-Stack Exposure</p>
           </div>

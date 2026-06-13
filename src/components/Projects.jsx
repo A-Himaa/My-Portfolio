@@ -74,7 +74,7 @@ export default function Projects() {
   });
 
   return (
-    <section className="bg-gradient-to-b from-[#041024] via-[#11104A] to-[#061936] min-h-screen text-center pt-10">
+    <section id="projects" className="bg-gradient-to-b from-[#041024] via-[#11104A] to-[#061936] min-h-screen text-center pt-30">
       <div className="relative space-y-6">
 
         <div className="inline-flex p-[1.5px] rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 opacity-90 to-fuchsia-500 shadow-[0_0_25px_rgba(139,92,246,0.45)]">
@@ -114,7 +114,7 @@ export default function Projects() {
                 onClick={() => setActiveProject(index)}
                
                 className={`
-                  relative bg-white/5 border border-white/10 rounded-2xl p-3 pt-4 backdrop-blur-xl shadow-inner shadow-white/15 transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_10px_rgba(99,102,241,0.25)] cursor-pointer
+                  relative bg-white/5 border border-white/10 rounded-2xl p-3 pt-4 backdrop-blur-xl shadow-inner shadow-white/15 transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_10px_rgba(99,102,241,0.25)]
                   ${isActive 
                     ? 'w-[400px] md:w-[600px] h-[500px] md:h-[600px] border-white/20 shadow-[0_0_40px_rgba(99,102,241,0.25)] ' 
                     : 'w-[80px] md:w-[110px] h-[500px] md:h-[600px] border-white/5 bg-[#0a1025] opacity-60 hover:opacity-80'
