@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Briefcase } from "lucide-react";
-import meImg from "../assets/me.png";
+import meImg from "../assets/me.PNG";
 
 
 export default function About(){
@@ -73,8 +73,8 @@ export default function About(){
           whileInView="visible"
           >
            <div className="relative w-72 h-72 md:w-[28rem] md:h-auto rounded-[2rem] overflow-hidden border border-white/10">
-            <img src={meImg} alt="Profile Image" className="w-full h-full object-cover opacity-80" />
-            <div className="absolute inset-0 bg-black/15" />
+            <img src={meImg} alt="Profile Image" className="w-full h-full object-cover opacity-85" />
+            <div className="absolute inset-0 bg-black/10" />
           </div>
 
         </motion.div>

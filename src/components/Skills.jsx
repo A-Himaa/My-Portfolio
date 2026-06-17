@@ -9,7 +9,6 @@ import github from "../assets/git.png";
 import mongo from "../assets/mongo.png";
 import sql from "../assets/sql.png";
 import figma from "../assets/fig.png";
-import certi from "../assets/cert1.png";
 import { title } from "framer-motion/client";
 
 
