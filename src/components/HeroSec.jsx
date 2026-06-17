@@ -1,7 +1,6 @@
 import { Github } from "lucide-react";
 import React, { useRef, useEffect, useState } from "react";
 import { FaArrowCircleRight, FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa";
-import HeroBg from "../../public/HeroBg.mp4";
 
 export default function HeroSec() {
     const videoRef = useRef(null);
@@ -119,7 +118,7 @@ export default function HeroSec() {
             <video 
                 ref={videoRef}
                 className="absolute inset-0 w-full h-screen object-center object-cover"
-                src={HeroBg}
+                src="/HeroBg.mp4"
                 autoPlay
                 loop
                 muted
