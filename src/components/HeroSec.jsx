@@ -1,7 +1,7 @@
 import { Github } from "lucide-react";
 import React, { useRef, useEffect, useState } from "react";
 import { FaArrowCircleRight, FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa";
-import HeroBg from "../assets/HeroBg.mp4";
+import HeroBg from "../../public/HeroBg.mp4";
 
 export default function HeroSec() {
     const videoRef = useRef(null);
