@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Briefcase } from "lucide-react";
+import meImg from "../assets/me.png";
 
 
 export default function About(){
@@ -62,14 +63,21 @@ export default function About(){
   return(
     <section className="min-h-screen bg-gradient-to-b from-[#041024] via-[#472382] to-[#061936] pt-20 md:pt-10 px-5 md:px-0">
       
-      <div className="grid grid cols-1 md:grid-cols-2 max-w-6xl mx-auto md:pt-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto pt-10 md:pt-28 gap-6">
 
         {/* Left Section - image */}
-        <div className="relative flex justify-center items-center mt-10 md:mt-0 group">
-          
-          {/* Shadow Glow Animation */}
-          <div></div>
-        </div>
+        <motion.div 
+          className="hidden md:flex relative justify-center items-center mt-10 md:mt-0 group"
+          variants={fadeInOut(0.3)}
+          initial="hidden"
+          whileInView="visible"
+          >
+           <div className="relative w-72 h-72 md:w-[28rem] md:h-auto rounded-[2rem] overflow-hidden border border-white/10">
+            <img src={meImg} alt="Profile Image" className="w-full h-full object-cover opacity-80" />
+            <div className="absolute inset-0 bg-black/15" />
+          </div>
+
+        </motion.div>
 
         {/*---------------Right Section---------------------*/}
         
@@ -87,6 +95,19 @@ export default function About(){
           >
             <span className="bg-gradient-to-r text-4xl md:text-5xl from-indigo-600 via-purple-600 to-fuchsia-500 bg-clip-text text-transparent">A</span>BOUT ME
           </motion.h2>
+          
+          {/* Small-screen image shown under the heading */}
+          <motion.div
+            className="relative flex justify-center items-center mt-6 md:hidden"
+            variants={fadeInOut(0.3)}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <div className="relative w-64 h-64 rounded-[2rem] overflow-hidden border border-white/10">
+              <img src={meImg} alt="Profile Image" className="w-full h-full object-cover opacity-80" />
+              <div className="absolute inset-0 bg-black/15" />
+            </div>
+          </motion.div>
           
           {/* Paragraph section */}
           <motion.div
