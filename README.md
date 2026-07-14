@@ -31,3 +31,43 @@ This portfolio showcases my skills, projects, experience, and personal branding 
 
 ---
 
+## Installation
+
+Follow these steps to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/A-Himaa/My-Portfolio.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd my-portfolio
+```
+
+### 3. Install dependencies
+
+Using npm:
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+Using npm:
+
+```bash
+npm run dev
+```
+
+### 5. Open in your browser
+
+Visit:
+
+```
+http://localhost:5173
+```
+
