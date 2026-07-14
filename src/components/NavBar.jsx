@@ -4,6 +4,7 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import { BsCodeSlash, BsPerson, BsChat } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import cvPdf from "../assets/CV.pdf";
 
 export default function navbar() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -78,6 +79,7 @@ export default function navbar() {
 
       {/*-----Resume Button-----*/}
         <div className="hidden lg:block">
+          <a href={cvPdf} target="_blank" rel="noopener noreferrer">
           <button className="relative text-white border border-white/20 px-6 py-2 rounded-full font-NavtextR font-medium text-lg tracking-wider
                              backdrop-blur-xl bg-white/7 overflow-hidden group cursor-pointer hover:bg-gradient-to-r hover:from-violet-950 
                              hover:via-purple-900 hover:to-blue-950 hover:border-white/50 hover:scale-105 transition-colors duration-500">
@@ -86,6 +88,7 @@ export default function navbar() {
                 Resume <FiDownload size={18} />
               </span>
           </button>
+          </a>
         </div>
 
         {/* Mobile menu button */}
