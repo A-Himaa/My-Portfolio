@@ -1,7 +1,7 @@
 import { FiDownload, FiMenu, FiX } from "react-icons/fi";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 import { MdOutlineWorkOutline } from "react-icons/md";
-import { BsCodeSlash, BsPerson, BsChat } from "react-icons/bs";
+import { BsCodeSlash, BsPerson, BsChat, BsFileEarmarkPdf } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import cvPdf from "../assets/CV.pdf";
@@ -125,6 +125,7 @@ export default function navbar() {
         <MobileItem icon={<BsCodeSlash />} label="SKILLS" target="/#skills" onClick={() => setOpenMenu(false)} />
         <MobileItem icon={<MdOutlineWorkOutline />} label="PROJECTS" target="/#projects" onClick={() => setOpenMenu(false)} />
         <MobileItem icon={<BsChat />} label="CONTACT" target="/#contact" onClick={() => setOpenMenu(false)} />
+        <MobileItem icon={<BsFileEarmarkPdf />} label="Resume" target={cvPdf} onClick={() => setOpenMenu(false)} />
       </div>
 
       {/* Bottom Section*/}
