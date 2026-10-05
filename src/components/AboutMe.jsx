@@ -15,10 +15,10 @@ export default function About(){
     },
     {
       title : "BSc (Hons) in Information Technology",
-      period: "2022 - Present",
+      period: "2022 - 2026",
       location: "SLIIT",
-      desc: "Undergraduate in Information Technology with a focus on software engineering, full-stack development, and research-based projects.",
-      status: "ON_GOING",
+      desc: "Graduate in Information Technology with a focus on software engineering, full-stack development, and research-based projects.",
+      status: "COMPLETED",
       type: "education"
     },
     {
